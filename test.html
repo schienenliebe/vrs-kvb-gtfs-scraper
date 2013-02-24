@@ -1,0 +1,1979 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <title>VRS: Neue Fahrplanauskunft</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15">
+<meta name="generator" content="TYPO3 4.3 CMS">
+<meta name="keywords" content="Fahrplanauskunft, Fahrplan, Infocenter, News, Events, Sonderfahrplan, Sonderz&#38;uuml;ge, VRS">
+<meta name="description" content="Struktur, Gebietskarte, Verkehrsunternehmen, Fahrplanauskunft, Tickets und Tarife im Verkehrsverbund Rhein-Sieg / mit Infos zu Kooperationspartnern und Projekten">
+<meta name="robots" content="INDEX,FOLLOW">
+<meta name="language" content="de">
+<meta name="author" content="Verkehrsverbund Rhein-Sieg GmbH">
+<meta name="revisit-after" content="1 month">
+<meta name="abstract" content="Struktur, Gebietskarte, Verkehrsunternehmen, Fahrplanauskunft, Tickets und Tarife im Verkehrsverbund Rhein-Sieg / mit Infos zu Kooperationspartnern und Projekten">
+<meta name="category1" content="SearchCrit1">
+<link rel="stylesheet" type="text/css" href="http://www.vrsinfo.de/typo3temp/stylesheet_2567075e15.css" media="all">
+<link rel="stylesheet" type="text/css" href="http://www.vrsinfo.de/typo3conf/ext/powermail/css/sampleCSS.css" media="all" title="powermail default CSS">
+<link rel="stylesheet" type="text/css" href="http://www.vrsinfo.de/fileadmin/templates/css/my_layout-neu.css" media="all">
+<link rel="stylesheet" type="text/css" href="http://www.vrsinfo.de/fileadmin/templates/css/screen-neu/main_layout.css" media="all">
+<link rel="stylesheet" type="text/css" href="http://www.vrsinfo.de/fileadmin/templates/css/print/print.css" media="print">
+<style type="text/css">#main_content { font-size: 12px; }</style>
+
+<script language="javascript" type="text/javascript">    
+   
+    function EingabeRouteOptionen()
+    {
+      this.domNodeLink=null;
+      this.domNodeForm=null;
+      this.form=null;
+
+      this.state=0;
+
+      this.eingabeRoute=null;
+      this.slotChanged=null;
+            
+      this.isVisible=function()
+      {
+        if ((this.domNodeForm!=null) && (this.domNodeForm.style.display=='block')) return true;
+        else return false;
+      }
+      
+      this.show=function()
+      {
+        if ((this.domNodeLink!=null) && (this.domNodeForm!=null) && (this.form!=null))
+        {
+          this.domNodeLink.style.display='none';
+          this.domNodeForm.style.display='block';
+          this.form.INPUT_DISPLAY.value='1';
+        }
+      }
+
+      this.hide=function()
+      {
+        if ((this.domNodeLink!=null) && (this.domNodeForm!=null) && (this.form!=null))
+        {
+          this.domNodeLink.style.display='block';
+          this.domNodeForm.style.display='none';
+          this.form.INPUT_DISPLAY.value='0';
+        }
+      }
+
+      this.changed=function()
+      {
+        if (this.eingabeRoute!=null)
+        {
+          this.eingabeRoute.setZuschlagfrei(this.getZuschlagfrei());
+          this.eingabeRoute.setVerkehrsmittel(this.getVerkehrsmittel());
+        }
+        if (this.slotChanged!=null) this.slotChanged();
+      }
+
+      this.getZuschlagfrei=function()
+      {
+        if (this.form!=null)
+        {
+          return this.form.CHECKBOX_ZUSCHLAGFREI.checked;
+        }
+        else return true;                    
+      }
+
+      this.getVerkehrsmittel=function()
+      {
+        if (this.form!=null)
+        {
+          var verkehrsmittel='';
+          if (this.form.CHECKBOX_ZUG_FERNVERKEHR.checked) verkehrsmittel+='LongDistanceTrains,';
+          if (this.form.CHECKBOX_ZUG_REGIONALVERKEHR.checked) verkehrsmittel+='RegionalTrains,';
+          if (this.form.CHECKBOX_SBAHN.checked) verkehrsmittel+='SuburbanTrains,';
+          if (this.form.CHECKBOX_STADTBAHN.checked) verkehrsmittel+='Underground,LightRail,';
+          if (this.form.CHECKBOX_BUS.checked) verkehrsmittel+='Bus,CommunityBus,';
+          if (this.form.CHECKBOX_BEDARFSVERKEHR.checked) verkehrsmittel+='OnDemandServices,';
+          if (verkehrsmittel.length>0) verkehrsmittel=verkehrsmittel.substring(0,verkehrsmittel.length-1);
+          return verkehrsmittel;
+        }
+        else return '';                    
+      }
+      
+      this.connectToEingabeRoute=function(eingabeRoute)
+      {
+        this.eingabeRoute=eingabeRoute;        
+        this.eingabeRoute.setZuschlagfrei(this.getZuschlagfrei());
+        this.eingabeRoute.setVerkehrsmittel(this.getVerkehrsmittel());
+      }
+            
+      this.initialize=function()
+      {
+        if (((this.domNodeLink=document.getElementById('DIV_OPTIONEN_LINK'))!=null) &&
+            ((this.domNodeForm=document.getElementById('DIV_OPTIONEN'))!=null) &&
+            ((this.form=document.FORM_OPTIONEN)!=null))
+        {
+          if (this.form.INPUT_DISPLAY.value=='1') this.show(); // (this.getValue()!=''))
+          else if (this.form.INPUT_DISPLAY.value=='0') this.hide();
+          else
+          {
+            if (this.domNodeForm.style.display=='block') this.form.INPUT_DISPLAY.value='1';
+            else this.form.INPUT_DISPLAY.value='0';
+          }
+
+          this.state=1;
+        }
+        else window.setTimeout("eingabeRouteOptionen.initialize();",150);
+      }
+
+      this.initialize();
+    }
+
+    var eingabeRouteOptionen=new EingabeRouteOptionen();
+  
+    </script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvToolbox.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvEvents.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/assFormularBoxPopUp.js"></script>
+<script language="javascript" type="text/javascript">
+    
+    var formularBoxPopUpGMDAIOLH=new FormularBoxPopUp('GMDAIOLH');
+        
+    </script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvInputCalendar.js"></script>
+<script language="javascript" type="text/javascript">
+
+      var inputCalendarGMDAIOLH=null;
+  
+      function initializeGMDAIOLH()
+      {       
+        if ((formularBoxPopUpGMDAIOLH!=null) && (formularBoxPopUpGMDAIOLH.state==1))
+        {
+        	inputCalendarGMDAIOLH=new InputCalendar("GMDAIOLH","inputCalendarGMDAIOLH");
+        	formularBoxPopUpGMDAIOLH.slotOnShow=inputCalendarGMDAIOLH.createSheet();
+          inputCalendarGMDAIOLH.show=function(date,x,y){inputCalendarGMDAIOLH.createSheet(date);formularBoxPopUpGMDAIOLH.show(x,y); }
+        	inputCalendarGMDAIOLH.hide=function(){ formularBoxPopUpGMDAIOLH.hide(); }
+        	inputCalendarGMDAIOLH.isVisible=function(){ formularBoxPopUpGMDAIOLH.isVisible(); }
+        }
+        else window.setTimeout("initializeGMDAIOLH();",150);
+      }
+  
+    </script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvXML.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvAJAX.js"></script>
+
+
+
+
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvInputDate.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvInputTime.js"></script>
+<script language="javascript" type="text/javascript">
+
+  		var inputDatumCNACECOG=null;
+  		var inputZeitCNACECOG=null;
+  
+  		function initializeCNACECOG()
+  		{				
+  			if ((document.getElementById("CNACECOG_0_INPUT")!=null) && 
+            (document.getElementById("CNACECOG_1_INPUT")!=null) &&
+            ((typeof(inputCalendarGMDAIOLH)!='undefined') && (inputCalendarGMDAIOLH!=null)) &&
+            (document.FORM_DATE_TIME!=null))
+  			{
+  				inputDatumCNACECOG=new InputDate("CNACECOG_0","inputDatumCNACECOG");
+  				inputZeitCNACECOG=new InputTime("CNACECOG_1","inputZeitCNACECOG");
+  
+  				if (inputDatumCNACECOG.domNodeInput.value.length==0) inputDatumCNACECOG.setValue('21.01.2012');
+          if (inputDatumCNACECOG.getValue()==null) inputDatumCNACECOG.setToday();
+          if (inputZeitCNACECOG.domNodeInput.value.length==0) inputZeitCNACECOG.setValue('14:32');
+          if (inputZeitCNACECOG.getValue()==null) inputZeitCNACECOG.setNow();
+  
+          inputDatumCNACECOG.showValid=function()
+          {
+          	this.domNodeInput.style.color='#000';
+          }     
+  
+          inputDatumCNACECOG.slotValueChanged=inputDatumCNACECOG.showValid;        
+  
+          inputDatumCNACECOG.showInvalid=function()
+          {
+            this.domNodeInput.style.color='#F00';
+          }
+  
+          inputDatumCNACECOG.slotInvalid=inputDatumCNACECOG.showInvalid;
+  
+          inputZeitCNACECOG.showValid=function()
+          {
+          	this.domNodeInput.style.color='#000';
+          }        
+  
+          inputZeitCNACECOG.slotValueChanged=inputDatumCNACECOG.showValid;        
+          
+          inputZeitCNACECOG.showInvalid=function()
+          {
+          	this.domNodeInput.style.color='#F00';
+          }
+  
+          inputZeitCNACECOG.slotInvalid=inputDatumCNACECOG.showInvalid;        
+
+          inputCalendarGMDAIOLH.slotDateSelected=function(date) { inputDatumCNACECOG.setDate(date);inputCalendarGMDAIOLH.hide();if (inputDatumCNACECOG.slotValueChanged!=null) inputDatumCNACECOG.slotValueChanged(); }
+          
+  				inputDatumCNACECOG.state=1;
+  				inputZeitCNACECOG.state=1;
+  			}
+  			else window.setTimeout("initializeCNACECOG();",150);
+  		}
+      
+    </script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvRenderer.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvMapLayerTiles.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvMapLayerRoutes.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvMapLayerSymbols.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvMapLayerSymbolsASS.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvMapLayerASS.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvMap.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvMapControlMouse.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvMapHistory.js"></script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/assMap.js"></script>
+<script language="javascript" type="text/javascript">
+
+    var mapACIABMKH=null;
+    
+    function initializeACIABMKH()
+    {
+      if ((document.getElementById("DIV_MAP_WINDOW_ACIABMKH")!=null) &&
+          (document.getElementById("BUTTON_SLIDER_ZOOM_ACIABMKH")!=null) &&
+          (document.getElementById("DIV_SLIDER_ACIABMKH")!=null))
+      {
+        mapACIABMKH=new ASSMap('ACIABMKH');          
+
+        mapACIABMKH.layerMap=new MapLayerTiles("Karte","http://212.66.132.240/map/",276450.0,5569887.0,535322.0,5828756.0,0.00244140625,1.25,256);
+        mapACIABMKH.addLayer(mapACIABMKH.layerMap);
+        mapACIABMKH.layerMap.setOpacity(0.9);
+        
+        mapACIABMKH.layerASS=new MapLayerASS("/vrs/cgi/service/map","ASS");
+        mapACIABMKH.addLayer(mapACIABMKH.layerASS);
+        
+        mapACIABMKH.layerRouten=new MapLayerRoutes("Routen");
+        mapACIABMKH.addLayer(mapACIABMKH.layerRouten);
+        mapACIABMKH.hideLayer("Routen");              
+        
+        mapACIABMKH.layerSymbols=new MapLayerSymbolsASS("Symbole");
+        mapACIABMKH.addLayer(mapACIABMKH.layerSymbols);
+        mapACIABMKH.layerSymbols.setSymbolHighlightStartZielVia("/vrs/images/highlightFlag.png",9,30);
+        mapACIABMKH.layerSymbols.setSymbolHighlightRoute("/vrs/images/highlightRoute.png",5,6);          
+        mapACIABMKH.layerSymbols.setSymbolStart("/vrs/images/Start.png",1,22);
+        mapACIABMKH.layerSymbols.setSymbolZiel("/vrs/images/Ziel.png",1,22);
+        mapACIABMKH.layerSymbols.setSymbolVia("/vrs/images/Via.png",1,22);
+
+        mapACIABMKH.state=1;
+      }
+      else window.setTimeout("initializeACIABMKH();",500);
+    }
+
+  </script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/assEingabeRouteKarte.js"></script>
+<script language="javascript" type="text/javascript">    
+   
+    var eingabeRouteKarte=null;
+
+    function initializeHFPECCDB()
+    {
+      var map;
+      
+      if ((typeof(mapACIABMKH)!='undefined') && ((map=mapACIABMKH)!=null) && (map.state==1))
+      {
+      	eingabeRouteKarte=new EingabeRouteKarte("/vrs/cgi/service/objects",0.078125,'ACIABMKH',map);
+      }
+      else window.setTimeout("initializeHFPECCDB();",500);
+    }
+  
+    </script>
+<script language="javascript" type="text/javascript">
+
+    function initializeEJGDLKAH()
+    {
+      if ((document.FORM_EJGDLKAH!=null) && (inputFDKHHMND!=null) && (inputFDKHHMND.state==1))
+      {
+        if ((node=document.getElementById('EJGDLKAH_CHECKBOX_HST'))!=null)
+        {
+          if (node.checked) inputFDKHHMND.setSearchClassStop();
+          else inputFDKHHMND.unsetSearchClassStop();
+        }
+
+        if ((node=document.getElementById('EJGDLKAH_CHECKBOX_HST_ABBR'))!=null)
+        {
+          if (node.checked) inputFDKHHMND.setSearchClassStopWithAbbr();
+          else inputFDKHHMND.unsetSearchClassStopWithAbbr();
+        }
+
+        if ((node=document.getElementById('EJGDLKAH_CHECKBOX_ADR'))!=null)
+        {
+          if (node.checked) inputFDKHHMND.setSearchClassAddress();
+          else inputFDKHHMND.unsetSearchClassAddress();
+        }
+
+        if ((node=document.getElementById('EJGDLKAH_CHECKBOX_POI'))!=null)
+        {
+          if (node.checked)
+          {
+            inputFDKHHMND.setSearchClassPOI();
+            document.getElementById('EJGDLKAH_SELECT_POI_KATEGORIE').disabled=false;
+          }
+          else
+          {
+            inputFDKHHMND.unsetSearchClassPOI();
+            document.getElementById('EJGDLKAH_SELECT_POI_KATEGORIE').disabled=true;
+          }
+        }
+
+        if ((node=document.getElementById('EJGDLKAH_SELECT_POI_KATEGORIE'))!=null)
+        {
+          if (node.selectedIndex>1) inputFDKHHMND.setFilterCategoryPOI(node.options[node.selectedIndex].text);
+          else inputFDKHHMND.setFilterCategoryPOI(null);
+        }
+
+        if (document.FORM_EJGDLKAH.INPUT_DISPLAY.value=='1')
+        {
+        	document.getElementById('DIV_LINK_EJGDLKAH').style.display='none';
+        	document.getElementById('DIV_EJGDLKAH').style.display='block';        	
+        }
+        else if (document.FORM_EJGDLKAH.INPUT_DISPLAY.value=='0')
+        {
+          document.getElementById('DIV_LINK_EJGDLKAH').style.display='block';
+          document.getElementById('DIV_EJGDLKAH').style.display='none';          
+        }
+        else
+        {
+        	if (document.getElementById('DIV_EJGDLKAH').style.display=='block') document.FORM_EJGDLKAH.INPUT_DISPLAY.value='1';
+        	else document.FORM_EJGDLKAH.INPUT_DISPLAY.value='0';
+        }
+      }
+    	else window.setTimeout("initializeEJGDLKAH();",150);
+    }    
+        
+    </script>
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvInputFlexbox.js"></script>
+
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvInputFlexboxSearch.js"></script>
+
+<script language="javascript" type="text/javascript" src="/vrs/common/script/ivvInputFlexboxSearchPointASS.js"></script>
+<script language="javascript" type="text/javascript">
+            
+      var inputFDKHHMND=null;
+                
+      function initializeFDKHHMND()
+      {        
+        if ((document.getElementById("FDKHHMND_HISTORY")!=null) && (document.getElementById("FDKHHMND_HISTORY_DATA")!=null))
+        {
+          inputFDKHHMND=new InputFlexboxSearchPointASS("/vrs/cgi/service/objects","FDKHHMND","inputFDKHHMND");
+
+          inputFDKHHMND.symbolStopHTML='<img src="/vrs/images/SymbolHaltestelle.png" border="0"/>';
+          inputFDKHHMND.symbolAddressHTML='<img src="/vrs/images/SymbolAdresse.png" border="0"/>';
+          inputFDKHHMND.symbolPOIHTML='<img src="/vrs/images/SymbolPOI.png" border="0"/>';
+          
+          inputFDKHHMND.setData('<?xml version="1.0" encoding="iso-8859-15"?><Response><ObjectInfo><Objects><Object><ID>417</ID><Type>Stop</Type><Value>Andreaskloster, Köln-Innenstadt</Value><Descr></Descr><Coords>356292.000,5645432.000</Coords><BBox></BBox><Stop><ASSNr>436</ASSNr></Stop></Object></Objects><ResponseStatus></ResponseStatus></ObjectInfo><SystemStatus><Status><Code>0</Code><Text>OK</Text></Status><Timestamp>2012-01-21T15:53:33+01:00</Timestamp><Host>ASS20-9</Host></SystemStatus></Response>','Andreaskloster');          
+          
+          inputFDKHHMND.restoreHistory(document.getElementById("FDKHHMND_HISTORY").value,document.getElementById("FDKHHMND_HISTORY_DATA").value);
+          
+          inputFDKHHMND.saveHistory=function()
+          {
+          	document.getElementById("FDKHHMND_HISTORY").value=inputFDKHHMND.getHistoryJS();
+          }
+
+          inputFDKHHMND.saveHistoryData=function()
+          {
+            document.getElementById("FDKHHMND_HISTORY_DATA").value=inputFDKHHMND.getHistoryDataJS();
+          }
+          
+          inputFDKHHMND.slotInputChanged=inputFDKHHMND.saveHistory;
+          inputFDKHHMND.slotValueChanged=inputFDKHHMND.saveHistory;
+          inputFDKHHMND.slotDataChanged=inputFDKHHMND.saveHistoryData;
+          
+          inputFDKHHMND.saveHistory();
+          inputFDKHHMND.saveHistoryData();
+          
+          inputFDKHHMND.state=1;
+        }
+        else window.setTimeout("initializeFDKHHMND();",500);
+      }
+            
+    </script>
+<script language="javascript" type="text/javascript">
+            
+      var inputCMNDFNJE=null;
+                
+      function initializeCMNDFNJE()
+      {        
+        if ((document.getElementById("CMNDFNJE_HISTORY")!=null) && (document.getElementById("CMNDFNJE_HISTORY_DATA")!=null))
+        {
+          inputCMNDFNJE=new InputFlexboxSearchPointASS("/vrs/cgi/service/objects","CMNDFNJE","inputCMNDFNJE");
+
+          inputCMNDFNJE.symbolStopHTML='<img src="/vrs/images/SymbolHaltestelle.png" border="0"/>';
+          inputCMNDFNJE.symbolAddressHTML='<img src="/vrs/images/SymbolAdresse.png" border="0"/>';
+          inputCMNDFNJE.symbolPOIHTML='<img src="/vrs/images/SymbolPOI.png" border="0"/>';
+          
+          inputCMNDFNJE.setData('','');          
+          
+          inputCMNDFNJE.restoreHistory(document.getElementById("CMNDFNJE_HISTORY").value,document.getElementById("CMNDFNJE_HISTORY_DATA").value);
+          
+          inputCMNDFNJE.saveHistory=function()
+          {
+          	document.getElementById("CMNDFNJE_HISTORY").value=inputCMNDFNJE.getHistoryJS();
+          }
+
+          inputCMNDFNJE.saveHistoryData=function()
+          {
+            document.getElementById("CMNDFNJE_HISTORY_DATA").value=inputCMNDFNJE.getHistoryDataJS();
+          }
+          
+          inputCMNDFNJE.slotInputChanged=inputCMNDFNJE.saveHistory;
+          inputCMNDFNJE.slotValueChanged=inputCMNDFNJE.saveHistory;
+          inputCMNDFNJE.slotDataChanged=inputCMNDFNJE.saveHistoryData;
+          
+          inputCMNDFNJE.saveHistory();
+          inputCMNDFNJE.saveHistoryData();
+          
+          inputCMNDFNJE.state=1;
+        }
+        else window.setTimeout("initializeCMNDFNJE();",500);
+      }
+            
+    </script>
+<script language="javascript" type="text/javascript">    
+   
+    function EingabeRouteVia()
+    {
+      this.domNodeLink=null;
+      this.domNodeForm=null;
+      this.form=null;
+      this.input=null;
+
+      this.state=0;
+
+      this.eingabeRoute=null;
+      this.slotChanged=null;
+            
+      this.isVisible=function()
+      {
+        if ((this.domNodeForm!=null) && (this.domNodeForm.style.display=='block')) return true;
+        else return false;
+      }
+      
+      this.show=function()
+      {
+        if ((this.domNodeLink!=null) && (this.domNodeForm!=null) && (this.form!=null))
+        {
+          this.domNodeLink.style.display='none';
+          this.domNodeForm.style.display='block';
+          this.form.INPUT_DISPLAY.value='1';
+        }
+      }
+
+      this.hide=function()
+      {
+        if ((this.domNodeLink!=null) && (this.domNodeForm!=null) && (this.form!=null))
+        {
+          this.domNodeLink.style.display='block';
+          this.domNodeForm.style.display='none';
+          this.form.INPUT_DISPLAY.value='0';
+        }
+      }
+
+      this.getViaZeitAufenthalt=function()
+      {
+        if ((this.form.SELECT_VIA_ZEIT_AUFENTHALT!=null) && (this.form.SELECT_VIA_ZEIT_AUFENTHALT.selectedIndex>-1))
+        {
+          return this.form.SELECT_VIA_ZEIT_AUFENTHALT.options[this.form.SELECT_VIA_ZEIT_AUFENTHALT.selectedIndex].value;
+        }
+        else return '0';        
+      }
+
+      this.changed=function()
+      {
+      	this.eingabeRoute.setViaZeitAufenthalt(this.getViaZeitAufenthalt()); 
+        if (this.slotChanged!=null) this.slotChanged();
+      }
+
+      this.reset=function()
+      {
+        if (this.input!=null) this.input.reset();
+      }
+
+      this.connectToEingabeRoute=function(eingabeRoute)
+      {
+        this.eingabeRoute=eingabeRoute;        
+        this.eingabeRoute.setViaZeitAufenthalt(this.getViaZeitAufenthalt());        
+      }
+      
+      this.initialize=function()
+      {
+        if (((this.domNodeLink=document.getElementById('DIV_VIA_LINK'))!=null) &&
+            ((this.domNodeForm=document.getElementById('DIV_VIA'))!=null) &&
+            ((this.form=document.FORM_VIA)!=null) &&
+            ((this.input=inputCMNDFNJE)!=null) && (inputCMNDFNJE.state==1))
+        {
+          this.input.unsetSearchClassAddress();
+          this.input.unsetSearchClassPOI();
+        	
+          if ((this.form.INPUT_DISPLAY.value=='1') || (this.input.getInputValue().length>0) || (this.input.getData()!=null)) this.show();
+          else if (this.form.INPUT_DISPLAY.value=='0') this.hide();
+          else
+          {
+            if (this.domNodeForm.style.display=='block') this.form.INPUT_DISPLAY.value='1';
+            else this.form.INPUT_DISPLAY.value='0';
+          }
+
+          this.state=1;
+        }
+        else window.setTimeout("eingabeRouteVia.initialize();",150);
+      }
+
+      this.initialize();
+    }
+
+    var eingabeRouteVia=new EingabeRouteVia();
+  
+    </script>
+<script language="javascript" type="text/javascript">
+
+    function initializeALDDCNOD()
+    {
+      if ((document.FORM_ALDDCNOD!=null) && (inputAEDBLCIF!=null) && (inputAEDBLCIF.state==1))
+      {
+        if ((node=document.getElementById('ALDDCNOD_CHECKBOX_HST'))!=null)
+        {
+          if (node.checked) inputAEDBLCIF.setSearchClassStop();
+          else inputAEDBLCIF.unsetSearchClassStop();
+        }
+
+        if ((node=document.getElementById('ALDDCNOD_CHECKBOX_HST_ABBR'))!=null)
+        {
+          if (node.checked) inputAEDBLCIF.setSearchClassStopWithAbbr();
+          else inputAEDBLCIF.unsetSearchClassStopWithAbbr();
+        }
+
+        if ((node=document.getElementById('ALDDCNOD_CHECKBOX_ADR'))!=null)
+        {
+          if (node.checked) inputAEDBLCIF.setSearchClassAddress();
+          else inputAEDBLCIF.unsetSearchClassAddress();
+        }
+
+        if ((node=document.getElementById('ALDDCNOD_CHECKBOX_POI'))!=null)
+        {
+          if (node.checked)
+          {
+            inputAEDBLCIF.setSearchClassPOI();
+            document.getElementById('ALDDCNOD_SELECT_POI_KATEGORIE').disabled=false;
+          }
+          else
+          {
+            inputAEDBLCIF.unsetSearchClassPOI();
+            document.getElementById('ALDDCNOD_SELECT_POI_KATEGORIE').disabled=true;
+          }
+        }
+
+        if ((node=document.getElementById('ALDDCNOD_SELECT_POI_KATEGORIE'))!=null)
+        {
+          if (node.selectedIndex>1) inputAEDBLCIF.setFilterCategoryPOI(node.options[node.selectedIndex].text);
+          else inputAEDBLCIF.setFilterCategoryPOI(null);
+        }
+
+        if (document.FORM_ALDDCNOD.INPUT_DISPLAY.value=='1')
+        {
+        	document.getElementById('DIV_LINK_ALDDCNOD').style.display='none';
+        	document.getElementById('DIV_ALDDCNOD').style.display='block';        	
+        }
+        else if (document.FORM_ALDDCNOD.INPUT_DISPLAY.value=='0')
+        {
+          document.getElementById('DIV_LINK_ALDDCNOD').style.display='block';
+          document.getElementById('DIV_ALDDCNOD').style.display='none';          
+        }
+        else
+        {
+        	if (document.getElementById('DIV_ALDDCNOD').style.display=='block') document.FORM_ALDDCNOD.INPUT_DISPLAY.value='1';
+        	else document.FORM_ALDDCNOD.INPUT_DISPLAY.value='0';
+        }
+      }
+    	else window.setTimeout("initializeALDDCNOD();",150);
+    }    
+        
+    </script>
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+            
+      var inputAEDBLCIF=null;
+                
+      function initializeAEDBLCIF()
+      {        
+        if ((document.getElementById("AEDBLCIF_HISTORY")!=null) && (document.getElementById("AEDBLCIF_HISTORY_DATA")!=null))
+        {
+          inputAEDBLCIF=new InputFlexboxSearchPointASS("/vrs/cgi/service/objects","AEDBLCIF","inputAEDBLCIF");
+
+          inputAEDBLCIF.symbolStopHTML='<img src="/vrs/images/SymbolHaltestelle.png" border="0"/>';
+          inputAEDBLCIF.symbolAddressHTML='<img src="/vrs/images/SymbolAdresse.png" border="0"/>';
+          inputAEDBLCIF.symbolPOIHTML='<img src="/vrs/images/SymbolPOI.png" border="0"/>';
+          
+          inputAEDBLCIF.setData('<?xml version="1.0" encoding="iso-8859-15"?><Response><ObjectInfo><Objects><Object><ID>81</ID><Type>Stop</Type><Value>Frankenstr., Köln-Meschenich</Value><Descr></Descr><Coords>354152.000,5635558.000</Coords><BBox></BBox><Stop><ASSNr>88</ASSNr></Stop></Object><Object><ID>1123</ID><Type>Stop</Type><Value>Frankenstr., Nideggen-Berg</Value><Descr></Descr><Coords>324878.000,5617259.000</Coords><BBox></BBox><Stop><ASSNr>1279</ASSNr></Stop></Object><Object><ID>3196</ID><Type>Stop</Type><Value>Frankenstr., Bergisch Gladbach-Sand</Value><Descr></Descr><Coords>346623.000,5597588.000</Coords><BBox></BBox><Stop><ASSNr>3693</ASSNr></Stop></Object><Object><ID>4488</ID><Type>Stop</Type><Value>Frankenstr., Grevenbroich-Frimmersdorf</Value><Descr></Descr><Coords>330473.000,5657403.000</Coords><BBox></BBox><Stop><ASSNr>5323</ASSNr></Stop></Object><Object><ID>4489</ID><Type>Stop</Type><Value>Frankenstr., Rommerskirchen-Oekoven</Value><Descr></Descr><Coords>336782.000,5660064.000</Coords><BBox></BBox><Stop><ASSNr>5324</ASSNr></Stop></Object><Object><ID>6391</ID><Type>Stop</Type><Value>Frankenstr., Dormagen-Mitte</Value><Descr></Descr><Coords>348965.000,5662070.000</Coords><BBox></BBox><Stop><ASSNr>8059</ASSNr></Stop></Object><Object><ID>9700</ID><Type>Stop</Type><Value>Frankenbachstr., SINZIG-Franken</Value><Descr></Descr><Coords>374906.000,5595724.000</Coords><BBox></BBox><Stop><ASSNr>12873</ASSNr></Stop></Object><Object><ID>10637</ID><Type>Stop</Type><Value>Frankenstr., MAYEN-Mayen</Value><Descr></Descr><Coords>373874.000,5576940.000</Coords><BBox></BBox><Stop><ASSNr>13978</ASSNr></Stop></Object><Object><ID>31876</ID><Type>Stop</Type><Value>Frankenstr., Emmerich-Mitte</Value><Descr></Descr><Coords>310291.000,5747777.000</Coords><BBox></BBox><Stop><ASSNr>42485</ASSNr></Stop></Object><Object><ID>31877</ID><Type>Stop</Type><Value>Frankenstr., Kleve-Mitte</Value><Descr></Descr><Coords>302078.000,5741094.000</Coords><BBox></BBox><Stop><ASSNr>42486</ASSNr></Stop></Object><Object><ID>35473</ID><Type>Stop</Type><Value>Frankenstr., Essen-Essen</Value><Descr></Descr><Coords>360521.000,5697684.000</Coords><BBox></BBox><Stop><ASSNr>46749</ASSNr></Stop></Object><Object><ID>35474</ID><Type>Stop</Type><Value>Frankenstr., Mönchengladbach-Mönchengladbach</Value><Descr></Descr><Coords>323210.000,5672797.000</Coords><BBox></BBox><Stop><ASSNr>46751</ASSNr></Stop></Object><Object><ID>43887</ID><Type>Stop</Type><Value>Frankenstr, Haltern am See-Haltern Am See</Value><Descr></Descr><Coords>367269.000,5731015.000</Coords><BBox></BBox><Stop><ASSNr>61935</ASSNr></Stop></Object><Object><ID>46954</ID><Type>Stop</Type><Value>Frankenstr., Steinheim-Mitte</Value><Descr></Descr><Coords>505618.000,5747124.000</Coords><BBox></BBox><Stop><ASSNr>68191</ASSNr></Stop></Object></Objects><ResponseStatus></ResponseStatus></ObjectInfo><SystemStatus><Status><Code>0</Code><Text>OK</Text></Status><Timestamp>2012-01-21T15:53:33+01:00</Timestamp><Host>ASS20-9</Host></SystemStatus></Response>','Frankenstr.');          
+          
+          inputAEDBLCIF.restoreHistory(document.getElementById("AEDBLCIF_HISTORY").value,document.getElementById("AEDBLCIF_HISTORY_DATA").value);
+          
+          inputAEDBLCIF.saveHistory=function()
+          {
+          	document.getElementById("AEDBLCIF_HISTORY").value=inputAEDBLCIF.getHistoryJS();
+          }
+
+          inputAEDBLCIF.saveHistoryData=function()
+          {
+            document.getElementById("AEDBLCIF_HISTORY_DATA").value=inputAEDBLCIF.getHistoryDataJS();
+          }
+          
+          inputAEDBLCIF.slotInputChanged=inputAEDBLCIF.saveHistory;
+          inputAEDBLCIF.slotValueChanged=inputAEDBLCIF.saveHistory;
+          inputAEDBLCIF.slotDataChanged=inputAEDBLCIF.saveHistoryData;
+          
+          inputAEDBLCIF.saveHistory();
+          inputAEDBLCIF.saveHistoryData();
+          
+          inputAEDBLCIF.state=1;
+        }
+        else window.setTimeout("initializeAEDBLCIF();",500);
+      }
+            
+    </script>
+<script language="javascript" type="text/javascript" src="/vrs/common/script/assEingabeRoute.js"></script>
+<script language="javascript" type="text/javascript">
+		
+		            var eingabeRoute=null;
+		
+		            function setSubmitButton()
+		            {
+		              if (eingabeRoute.checkForm())
+		              {
+		                document.getElementById("BUTTON_SUBMIT_DISABLED").style.display="none";
+		                document.getElementById("BUTTON_SUBMIT").style.display="block";
+		              }
+		              else
+		              {
+		                document.getElementById("BUTTON_SUBMIT_DISABLED").style.display="block";
+		                document.getElementById("BUTTON_SUBMIT").style.display="none";
+		              }
+		            }
+		            
+		            function changed()
+		            {
+		              setSubmitButton();
+		            }
+		
+		            function initialize()
+		            {				  				 
+		              if ((inputAEDBLCIF!=null) && (inputAEDBLCIF.state==1) &&
+		                  ((typeof(eingabeRouteVia)=='undefined') || ((eingabeRouteVia!=null) && (eingabeRouteVia.state==1))) &&
+		                  (inputFDKHHMND!=null) && (inputFDKHHMND.state==1) &&
+		                  (inputDatumCNACECOG!=null) && (inputDatumCNACECOG.state==1) && 
+		                  (inputZeitCNACECOG!=null) && (inputZeitCNACECOG.state==1) &&
+		                  ((typeof(eingabeRouteBarriere)=='undefined') || ((eingabeRouteBarriere!=null) && (eingabeRouteBarriere.state==1))) &&
+		                  ((typeof(eingabeRouteKarte)=='undefined') || ((eingabeRouteKarte!=null) && (eingabeRouteKarte.state==1))))
+		              {                                
+		                var inputVia=null;
+		                if (typeof(eingabeRouteVia)!='undefined') inputVia=eingabeRouteVia.input;
+		                eingabeRoute=new EingabeRoute(document.eingabe,inputAEDBLCIF,inputVia,inputFDKHHMND,inputDatumCNACECOG,inputZeitCNACECOG);                
+		
+		                if (document.FORM_DATE_TIME.RADIO_ABAN[0].checked)
+		                {
+		                  if (document.FORM_DATE_TIME.RADIO_ABAN[0].value=='ab') eingabeRoute.setSuchrichtungAb();
+		                  else eingabeRoute.setSuchrichtungAn();
+		                }
+		                else
+		                {
+		                  if (document.FORM_DATE_TIME.RADIO_ABAN[1].value=='ab') eingabeRoute.setSuchrichtungAb();
+		                  else eingabeRoute.setSuchrichtungAn();
+		                }
+		
+		                if (typeof(eingabeRouteVia)!='undefined') eingabeRouteVia.connectToEingabeRoute(eingabeRoute);
+		                if (typeof(eingabeRouteBarriere)!='undefined') eingabeRouteBarriere.connectToEingabeRoute(eingabeRoute);
+		                if (typeof(eingabeRouteKarte)!='undefined') eingabeRouteKarte.connectToEingabeRoute(eingabeRoute);
+                    if (typeof(eingabeRouteOptionen)!='undefined') eingabeRouteOptionen.connectToEingabeRoute(eingabeRoute);
+		
+		                eingabeRoute.registerOnChange(changed);
+		                eingabeRoute.toForm();
+		                
+		                if ((inputAEDBLCIF.getInputValue()==null) || (inputAEDBLCIF.getInputValue()==''))
+		                {
+		                  inputAEDBLCIF.focus();
+		                }
+		              }
+				          else window.setTimeout("initialize();",150);                
+		            }
+		            
+		          </script>
+<script src="http://www.vrsinfo.de/typo3/contrib/prototype/prototype.js" type="text/javascript"></script><script src="http://www.vrsinfo.de/fileadmin/SBS/ext/vrs_stations/map/vrs_stations_map_scripts.js" type="text/javascript"></script><script src="http://www.vrsinfo.de/typo3temp/javascript_93077bb238.js" type="text/javascript"></script><script src="http://www.vrsinfo.de/fileadmin/templates/js/jquery-1.4.2.min.js" type="text/javascript"></script><script src="http://www.vrsinfo.de/fileadmin/templates/js/jquery.tools.min.js" type="text/javascript"></script><script src="http://www.vrsinfo.de/fileadmin/templates/js/custom.js" type="text/javascript"></script><script type="text/javascript">
+	/*<![CDATA[*/
+
+		var GHfontsizeClass = Class.create({
+
+			initialize: function(baseValue, actValue, minValue, maxValue, increment) {
+				this.baseValue = baseValue;
+				this.actValue = actValue;
+				this.minValue = minValue;
+				this.maxValue = maxValue;
+				this.increment = increment;
+				this.newValue = this.actValue;
+			},
+
+			changeFontSize: function(whatToDo) {
+				switch (whatToDo) {
+					case "smaller":
+						this.newValue = this.actValue - this.increment;
+						break;
+					case "reset":
+						this.newValue = this.baseValue;
+						break;
+					case "larger":
+						this.newValue = this.actValue + this.increment;
+						break;
+				}
+
+				if(this.newValue < this.minValue) {
+					this.newValue = this.minValue;
+				}
+				if(this.newValue > this.maxValue) {
+					this.newValue = this.maxValue;
+				}
+
+				document.getElementById("main_content").style.fontSize = this.newValue + "px";
+			
+				if(this.actValue != this.newValue) {
+					this.saveToSession();
+					if(this.newValue > this.baseValue && this.actValue <= this.baseValue) {
+						Element.removeClassName("tx-ghfontsize-smaller", "active");
+						Element.removeClassName("tx-ghfontsize-reset", "active");
+						Element.addClassName("tx-ghfontsize-larger", "active");
+					}
+					if(this.newValue == this.baseValue && this.actValue != this.baseValue) {
+						Element.removeClassName("tx-ghfontsize-smaller", "active");
+						Element.addClassName("tx-ghfontsize-reset", "active");
+						Element.removeClassName("tx-ghfontsize-larger", "active");
+					}
+					if(this.newValue < this.baseValue && this.actValue >= this.baseValue) {
+						Element.addClassName("tx-ghfontsize-smaller", "active");
+						Element.removeClassName("tx-ghfontsize-reset", "active");
+						Element.removeClassName("tx-ghfontsize-larger", "active");
+					}
+				}
+				this.actValue = this.newValue;
+			},
+
+			saveToSession: function() {
+				new Ajax.Request ( "index.php", {
+					parameters: {eID: "gh_fontsize", tx_ghfontsize_newvalue: this.newValue}
+				});
+			}
+		});
+
+		var GHfontsize = new GHfontsizeClass(12, 12, 12, 16, 2);
+
+	/*]]>*/
+	</script><link rel="StyleSheet" href="/vrs/css/vrsFahrplan.css" type="text/css" media="screen">
+</head>
+  <body id="id332" onload="initializeGMDAIOLH();initializeCNACECOG();initializeACIABMKH();initializeHFPECCDB();initializeEJGDLKAH();initializeFDKHHMND();initializeCMNDFNJE();initializeALDDCNOD();initializeAEDBLCIF();initialize();" onpageshow="if (event.persisted) initializeGMDAIOLH();if (event.persisted) initializeCNACECOG();if (event.persisted) initializeACIABMKH();if (event.persisted) initializeHFPECCDB();if (event.persisted) initializeEJGDLKAH();if (event.persisted) initializeFDKHHMND();if (event.persisted) initializeCMNDFNJE();if (event.persisted) initializeALDDCNOD();if (event.persisted) initializeAEDBLCIF();if (event.persisted) initialize();" onkeydown="if (events.getKeyCode(event)==13) { eingabeRoute.enterPressed(); }" onunload="">
+  
+      <div id="AMLCBNDC">
+
+
+
+<a name="top"></a>
+
+  <div class="page_margins">
+    <div class="page"><div id="nav"><ul class="firstLevel"><li><a href="http://www.vrsinfo.de/aktuelles/aktuelle-fahrplanaenderungen.html" title="Aktuelles" onfocus="blurLink(this);">Aktuelles<!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul class="secondLevel"><li><a href="http://www.vrsinfo.de/aktuelles/aktuelle-fahrplanaenderungen.html" title="Aktuelle Fahrplanänderungen" onfocus="blurLink(this);">Aktuelle Fahrplanänderungen</a></li><li><a href="http://www.vrsinfo.de/aktuelles/aktuelle-ticketinformationen/schoeneferienticket-nrw.html" title="Aktuelle Ticketinformationen" onfocus="blurLink(this);">Aktuelle Ticketinformationen</a></li><li><a href="http://www.vrsinfo.de/aktuelles/veranstaltungen/loss-mer-singe-op-joeck.html" title="Veranstaltungen" onfocus="blurLink(this);">Veranstaltungen</a></li><li><a href="http://www.vrsinfo.de/aktuelles/freizeittipps/wunderbar-wanderbar-2011.html" title="Freizeittipps" onfocus="blurLink(this);">Freizeittipps</a></li><li><a href="http://www.vrsinfo.de/aktuelles/power-your-life.html" title="Power your Life" onfocus="blurLink(this);">Power your Life</a></li><li class="last"><a href="http://www.vrsinfo.de/aktuelles/newsletter.html" title="Newsletter" onfocus="blurLink(this);">Newsletter</a></li></ul><!--[if lte IE 6]></td></tr></table></a><![endif]--></li><li class="active"><a href="http://www.vrsinfo.de/fahrplan/fahrplanauskunft.html" title="Fahrplan" onfocus="blurLink(this);">Fahrplan<!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul class="secondLevel"><li><a href="http://www.vrsinfo.de/fahrplan/fahrplanauskunft.html" title="Fahrplanauskunft" onfocus="blurLink(this);">Fahrplanauskunft</a></li><li><a href="http://www.vrsinfo.de/fahrplan/neue-fahrplanauskunft.html" title="Neue Fahrplanauskunft" onfocus="blurLink(this);">Neue Fahrplanauskunft</a></li><li><a href="http://www.vrsinfo.de/fahrplan/haltestellen-und-linieninformationen.html" title="Haltestellen- und Linieninformationen" onfocus="blurLink(this);">Haltestellen- und Linieninformationen</a></li><li><a href="http://www.vrsinfo.de/fahrplan/haltestellenabfahrtsplan.html" title="Haltestellenabfahrtsplan" onfocus="blurLink(this);">Haltestellenabfahrtsplan</a></li><li><a href="http://www.vrsinfo.de/fahrplan/haltestellen-und-linieninformationen.html" title="Linienfahrpläne (Minis)" onfocus="blurLink(this);">Linienfahrpläne (Minis)</a></li><li><a href="http://www.vrsinfo.de/fahrplan/fahrplanbuecher.html" title="Fahrplanbücher" onfocus="blurLink(this);">Fahrplanbücher</a></li><li><a href="http://www.vrsinfo.de/fahrplan/fahrplan-mobil.html" title="Fahrplan mobil" onfocus="blurLink(this);">Fahrplan mobil</a></li><li><a href="http://www.vrsinfo.de/fahrplan/intermodaler-router.html" title="Intermodaler Router" onfocus="blurLink(this);">Intermodaler Router</a></li><li class="last"><a href="http://www.vrsinfo.de/fahrplan/fahrplanauskunft-als-igoogle-gadget.html" title="Fahrplanauskunft als iGoogle-Gadget" onfocus="blurLink(this);">Fahrplanauskunft als iGoogle-Gadget</a></li></ul><!--[if lte IE 6]></td></tr></table></a><![endif]--></li><li><a href="http://www.vrsinfo.de/streckennetz/schienennetzplaene.html" title="Streckennetz" onfocus="blurLink(this);">Streckennetz<!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul class="secondLevel"><li><a href="http://www.vrsinfo.de/streckennetz/schienennetzplaene.html" title="Schienennetzpläne" onfocus="blurLink(this);">Schienennetzpläne</a></li><li><a href="http://www.vrsinfo.de/streckennetz/busnetzplaene.html" title="Busnetzpläne" onfocus="blurLink(this);">Busnetzpläne</a></li><li class="last"><a href="http://www.vrsinfo.de/streckennetz/uebersichtskarten.html" title="Übersichtskarten" onfocus="blurLink(this);">Übersichtskarten</a></li></ul><!--[if lte IE 6]></td></tr></table></a><![endif]--></li><li><a href="http://www.vrsinfo.de/tickets/preisliste.html" title="Tickets" onfocus="blurLink(this);">Tickets<!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul class="secondLevel"><li><a href="http://www.vrsinfo.de/tickets/preisliste.html" title="Preisliste" onfocus="blurLink(this);">Preisliste</a></li><li><a href="http://www.vrsinfo.de/tickets/ticketberater.html" title="Ticketberater" onfocus="blurLink(this);">Ticketberater</a></li><li><a href="http://www.vrsinfo.de/tickets/ticketshop.html" target="_blank" title="Ticketshop" onfocus="blurLink(this);">Ticketshop</a></li><li><a href="http://www.vrsinfo.de/tickets/tickets-fuer-einzelne-fahrten/einzelticket-und-4erticket.html" title="Tickets für einzelne Fahrten" onfocus="blurLink(this);">Tickets für einzelne Fahrten</a></li><li><a href="http://www.vrsinfo.de/tickets/tickets-fuer-regelmaessige-fahrten/wochenticket.html" title="Tickets für regelmige Fahrten" onfocus="blurLink(this);">Tickets für regelmige Fahrten</a></li><li><a href="http://www.vrsinfo.de/tickets/tickets-fuer-job-und-ausbildung/jobticket.html" title="Tickets für Job und Ausbildung" onfocus="blurLink(this);">Tickets für Job und Ausbildung</a></li><li><a href="http://www.vrsinfo.de/tickets/vrs-abos/vrs-tickets-im-abo.html" title="VRS-Abos" onfocus="blurLink(this);">VRS-Abos</a></li><li><a href="http://www.vrsinfo.de/tickets/tickets-zu-nachbarverbuenden.html" title="Tickets zu Nachbarverbünden" onfocus="blurLink(this);">Tickets zu Nachbarverbünden</a></li><li><a href="http://www.vrsinfo.de/tickets/tickets-fuer-nrw-weite-fahrten.html" title="Tickets für NRW-weite Fahrten" onfocus="blurLink(this);">Tickets für NRW-weite Fahrten</a></li><li><a href="http://www.vrsinfo.de/tickets/sonstige-tickets/db-city-ticket.html" title="Sonstige Tickets" onfocus="blurLink(this);">Sonstige Tickets</a></li><li class="last"><a href="http://www.vrsinfo.de/tickets/tarif-und-befoerderungs-bestimmungen.html" title="Tarif- und Beförderungs-bestimmungen" onfocus="blurLink(this);">Tarif- und Beförderungs-bestimmungen</a></li></ul><!--[if lte IE 6]></td></tr></table></a><![endif]--></li><li><a href="http://www.vrsinfo.de/service/fundsachen.html" title="Service" onfocus="blurLink(this);">Service<!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul class="secondLevel"><li><a href="http://www.vrsinfo.de/service/fundsachen.html" title="Fundsachen" onfocus="blurLink(this);">Fundsachen</a></li><li><a href="http://www.vrsinfo.de/service/kundencenter-im-vrs.html" title="Kundencenter im VRS" onfocus="blurLink(this);">Kundencenter im VRS</a></li><li><a href="http://www.vrsinfo.de/service/telefon-hotline.html" title="Telefon-Hotline" onfocus="blurLink(this);">Telefon-Hotline</a></li><li><a href="http://www.vrsinfo.de/fahrplan/haltestellen-und-linieninformationen.html" title="Haltestellen- und Linieninformationen" onfocus="blurLink(this);">Haltestellen- und Linieninformationen</a></li><li><a href="http://www.vrsinfo.de/service/anruflinien-ast-taxibus-etc.html" title="Anruflinien (AST, TaxiBus, etc.)" onfocus="blurLink(this);">Anruflinien (AST, TaxiBus, etc.)</a></li><li><a href="http://www.vrsinfo.de/service/parkride-bikeride.html" title="Park&#38;Ride / Bike&#38;Ride" onfocus="blurLink(this);">Park&Ride / Bike&Ride</a></li><li><a href="http://www.vrsinfo.de/service/barrierefreies-reisen.html" title="Barrierefreies Reisen" onfocus="blurLink(this);">Barrierefreies Reisen</a></li><li><a href="http://www.vrsinfo.de/service/mobilitaetsgarantie.html" title="Mobilitätsgarantie" onfocus="blurLink(this);">Mobilitätsgarantie</a></li><li><a href="http://www.vrsinfo.de/service/fahrplanbuecher-shop.html" title="Fahrplanbücher - Shop" onfocus="blurLink(this);">Fahrplanbücher - Shop</a></li><li><a href="http://www.vrsinfo.de/service/downloads.html" title="Downloads" onfocus="blurLink(this);">Downloads</a></li><li class="last"><a href="http://www.vrsinfo.de/service/gut-zu-wissen.html" title="Gut zu wissen" onfocus="blurLink(this);">Gut zu wissen</a></li></ul><!--[if lte IE 6]></td></tr></table></a><![endif]--></li><li><a href="http://www.vrsinfo.de/der-vrs/verbundgebiet.html" title="Der VRS" onfocus="blurLink(this);">Der VRS<!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul class="secondLevel"><li><a href="http://www.vrsinfo.de/der-vrs/verbundgebiet.html" title="Verbundgebiet" onfocus="blurLink(this);">Verbundgebiet</a></li><li><a href="http://www.vrsinfo.de/der-vrs/organisation.html" title="Organisation" onfocus="blurLink(this);">Organisation</a></li><li><a href="http://www.vrsinfo.de/der-vrs/verkehrsunternehmen.html" title="Verkehrsunternehmen" onfocus="blurLink(this);">Verkehrsunternehmen</a></li><li><a href="http://www.vrsinfo.de/der-vrs/vrs-gremien.html" target="_blank" title="VRS-Gremien" onfocus="blurLink(this);">VRS-Gremien</a></li><li><a href="http://www.vrsinfo.de/der-vrs/verbundberichte.html" title="Verbundberichte" onfocus="blurLink(this);">Verbundberichte</a></li><li><a href="http://www.vrsinfo.de/der-vrs/vrs-team.html" title="VRS-Team" onfocus="blurLink(this);">VRS-Team</a></li><li><a href="http://www.vrsinfo.de/der-vrs/stellenangebote.html" title="Stellenangebote" onfocus="blurLink(this);">Stellenangebote</a></li><li><a href="http://www.vrsinfo.de/der-vrs/mobilitaetsmanagement.html" title="Mobilitätsmanagement" onfocus="blurLink(this);">Mobilitätsmanagement</a></li><li><a href="http://www.vrsinfo.de/der-vrs/oekoprofit-koeln-2011.html" title="ÖKOPROFIT Köln 2011" onfocus="blurLink(this);">ÖKOPROFIT Köln 2011</a></li><li><a href="http://www.vrsinfo.de/der-vrs/nahverkehr-rheinland.html" title="Nahverkehr Rheinland" onfocus="blurLink(this);">Nahverkehr Rheinland</a></li><li><a href="http://www.vrsinfo.de/der-vrs/kompetenzcenter-marketing-nrw.html" title="Kompetenzcenter Marketing NRW" onfocus="blurLink(this);">Kompetenzcenter Marketing NRW</a></li><li class="last"><a href="http://www.vrsinfo.de/der-vrs/busse-und-bahnen-in-nrw.html" title="Busse und Bahnen in NRW" onfocus="blurLink(this);">Busse und Bahnen in NRW</a></li></ul><!--[if lte IE 6]></td></tr></table></a><![endif]--></li><li><a href="http://www.vrsinfo.de/presse/pressemeldungen.html" title="Presse" onfocus="blurLink(this);">Presse<!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul class="secondLevel"><li><a href="http://www.vrsinfo.de/presse/pressemeldungen.html" title="Pressemeldungen" onfocus="blurLink(this);">Pressemeldungen</a></li><li><a href="http://www.vrsinfo.de/presse/pressearchiv.html" title="Pressearchiv" onfocus="blurLink(this);">Pressearchiv</a></li><li class="last"><a href="http://www.vrsinfo.de/presse/pressekontakt.html" title="Pressekontakt" onfocus="blurLink(this);">Pressekontakt</a></li></ul><!--[if lte IE 6]></td></tr></table></a><![endif]--></li><li class="leftDirection"><a href="http://www.vrsinfo.de/kontakt/e-mail-formular.html" title="Kontakt" onfocus="blurLink(this);">Kontakt<!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul class="secondLevel"><li><a href="http://www.vrsinfo.de/kontakt/e-mail-formular.html" title="E-Mail-Formular" onfocus="blurLink(this);">E-Mail-Formular</a></li><li class="last"><a href="http://www.vrsinfo.de/kontakt/impressum.html" title="Impressum" onfocus="blurLink(this);">Impressum</a></li></ul><!--[if lte IE 6]></td></tr></table></a><![endif]--></li><li class="lang"><a href="http://www.vrsinfo.de/englisch/the-vrs/vrs-about-us.html"><img title="Change language: English" alt="Change language: English" src="http://www.vrsinfo.de/fileadmin/templates/images/flag_eng.jpg"></a></li></ul></div></div>
+      <div id="header"><a href="http://www.vrsinfo.de/index.php" title="Startseite" class="homelink">homelink</a><div class="tx-macinasearchbox-pi1">
+		
+<div class="searchbox" id="searchbox-ger">
+<form action="http://www.vrsinfo.de/einzelseiten/suche.html?L=0" method="post" name="searchform" id="searchform">
+      <input name="tx_indexedsearch[submit_button]" type="image" src="http://www.vrsinfo.de/fileadmin/templates/images/button.png" class="submitbutton">
+      <input name="tx_indexedsearch[sword]" type="text" value="Suchbegriff" id="sword" class="inputfield">
+        <input type="hidden" name="tx_indexedsearch[_sections]" value="0">
+        <input type="hidden" name="tx_indexedsearch[pointer]" value="0">
+        <input type="hidden" name="tx_indexedsearch[ext]" value="1">
+        <input type="hidden" name="tx_indexedsearch[lang]" value="0">
+</form>
+</div>
+
+	</div>
+	</div>
+      <div id="main">              
+        
+        <div id="subnavigation"><ul><li><a href="http://www.vrsinfo.de/fahrplan/fahrplanauskunft.html" title="Fahrplanauskunft" onfocus="blurLink(this);">Fahrplanauskunft</a></li><li><a href="http://www.vrsinfo.de/fahrplan/neue-fahrplanauskunft.html" title="Neue Fahrplanauskunft" onfocus="blurLink(this);">Neue Fahrplanauskunft</a></li><li><a href="http://www.vrsinfo.de/fahrplan/haltestellen-und-linieninformationen.html" title="Haltestellen- und Linieninformationen" onfocus="blurLink(this);">Haltestellen- und Linieninformationen</a></li><li><a href="http://www.vrsinfo.de/fahrplan/haltestellenabfahrtsplan.html" title="Haltestellenabfahrtsplan" onfocus="blurLink(this);">Haltestellenabfahrtsplan</a></li><li><a href="http://www.vrsinfo.de/fahrplan/haltestellen-und-linieninformationen.html" title="Linienfahrpläne (Minis)" onfocus="blurLink(this);">Linienfahrpläne (Minis)</a></li><li><a href="http://www.vrsinfo.de/fahrplan/fahrplanbuecher.html" title="Fahrplanbücher" onfocus="blurLink(this);">Fahrplanbücher</a></li><li><a href="http://www.vrsinfo.de/fahrplan/fahrplan-mobil.html" title="Fahrplan mobil" onfocus="blurLink(this);">Fahrplan mobil</a></li><li><a href="http://www.vrsinfo.de/fahrplan/intermodaler-router.html" title="Intermodaler Router" onfocus="blurLink(this);">Intermodaler Router</a></li><li><a href="http://www.vrsinfo.de/fahrplan/fahrplanauskunft-als-igoogle-gadget.html" title="Fahrplanauskunft als iGoogle-Gadget" onfocus="blurLink(this);">Fahrplanauskunft als iGoogle-Gadget</a></li></ul></div>
+            
+        <div class="content_wrapper">
+            
+            <div id="breadcrumb"><ul><li><a href="http://www.vrsinfo.de/http://192.168.202.81/" title="Startseite" onfocus="blurLink(this);">Startseite</a></li><li><a href="http://www.vrsinfo.de/fahrplan/fahrplanauskunft.html" title="Fahrplan" onfocus="blurLink(this);">Fahrplan</a></li><li><span title="Neue Fahrplanauskunft">Neue Fahrplanauskunft</span></li></ul></div>
+            
+            <div id="main_content">
+                
+                <div id="content"><!--DMAILER_SECTION_BOUNDARY_--><div id="c1171" class="csc-default"><div class="csc-header csc-header-n1"><h1 class="csc-firstHeader">Fahrplanauskunft</h1></div></div><!--DMAILER_SECTION_BOUNDARY_END--><!--DMAILER_SECTION_BOUNDARY_--><div id="c1170" class="csc-default"><div class="csc-header csc-header-n2"><h2>Neue Version der VRS-Fahrplanauskunft - Auskünfte für den VRS und ganz NRW</h2></div><div class="csc-textpic-text"></div></div><!--DMAILER_SECTION_BOUNDARY_END--><!--DMAILER_SECTION_BOUNDARY_--><div id="c1168" class="csc-default"><div id="BCDALGGE"> <!-- onselectstart="return false;" oncontextmenu="return false;"> -->
+		          <div class="Fahrplanauskunft" style="position:relative;">
+		            
+		            <div style="padding-bottom:10px;" id="BIMGBLIG"><div class="formularBox" style="width:100%;">
+	<div class="headline1" style="width:100%"><div style="padding-left:10px;">Start</div></div>
+	<div class="content" style="width:100%"><div id="DCIEMABF" style="padding:10px;">
+		                <table cellspacing="0" cellpadding="0" border="0" style="width:100%">
+		                  <tr>
+		                    <td>
+				                  <div id="AEDBLCIF" style="position:relative;z-index:150">
+    <form name="FORM_AEDBLCIF" onSubmit="return false;">      
+      <table cellspacing="0" cellpadding="0" border="0" style="width:100%">
+        <tr>
+          <td>
+            <div style="position:relative;">
+              <table cellspacing="0" cellpadding="0" border="0" class="boxInput" style="width:100%;margin:0px;padding:0px;">
+                <tr>
+                  <td onClick="document.getElementById('AEDBLCIF_INPUT').focus();" style="width:20px;vertical-align:middle;"><div id="AEDBLCIF_INPUT_SYMBOL" style="padding-left:2px;padding-right:2px;"><img src="/vrs/images/SymbolInput.png"></div></td>
+                  <td style="white-space:nowrap;padding-top:1px;width:100%"><input type="text" name="AEDBLCIF_text" id="AEDBLCIF_INPUT" maxlength="100" value onselectstart="window.event.cancelBubble=true; return true;" style="margin:0px;padding:0px;border-style:none;width:100%;"></td>
+                </tr>
+              </table>                 
+              <div style="position:absolute;width:100%;padding-top:1px;z-index:130;margin-bottom:0px;border:0px;">
+                <div id="AEDBLCIF_BOX_SELECTION" class="boxSelection" style="display:none;max-height:300px;overflow:auto;">
+                </div>
+              </div>
+            </div>
+          </td>           
+          <td style="padding-left:10px;width:100px;">
+            <div id="AEDBLCIF_BUTTON_SELECTION_DISABLED">
+              <div style="width:100px;height:21px" id="MDLEOFPG">
+  <div style="position:relative;width:100%;height:100%" onclick="">
+    <table cellspacing="0" cellpadding="0" border="0" class="buttonDisabled" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+                  <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td>Vorschläge</td>
+                      <td style="padding-left:5px;"><img src="/vrs/images/PfeilUntenBW.png"></td>
+                    </tr>
+                  </table>
+                </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>
+            </div>
+            <div id="AEDBLCIF_BUTTON_SELECTION" style="display:none;">
+              <div style="width:100px;height:21px" id="GGGAOCCC">
+  <div style="position:relative;width:100%;height:100%" onclick="">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+                  <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td>Vorschläge</td>
+                      <td style="padding-left:5px;"><img src="/vrs/images/PfeilUnten.png"></td>
+                    </tr>
+                  </table>
+                </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>
+            </div>
+          </td>
+        </tr>
+      </table>    
+      <input type="text" name="history" id="AEDBLCIF_HISTORY" style="display:none" value>
+      <input type="text" name="historyData" id="AEDBLCIF_HISTORY_DATA" style="display:none" value>      
+    </form>
+  </div>
+				                </td>
+				                <td rowspan="2" style="vertical-align:top;width:80px;padding-left:10px;">
+			                    <div id="EOGAMCPG" style="height:21px;">
+  <div style="position:relative;width:100%;height:100%" onclick="var data; if ((eingabeRoute!=null) && ((data=eingabeRoute.getStart())!=null)) eingabeRouteKarte.show(data.x,data.y); else eingabeRouteKarte.show();">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+			                        <table cellspacing="0" cellpadding="0" border="0">
+			                          <tr>
+			                            <td>Karte</td>
+			                            <td style="padding-left:5px;"><img src="/vrs/images/VRSKarteKlein.png"></td>
+			                          </tr>
+			                        </table>
+			                      </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>		                  
+				                </td>
+		                  </tr>
+		                  <tr>
+		                    <td>
+	                        <div id="ALDDCNOD">
+    <div id="DIV_LINK_ALDDCNOD">
+      <table cellspacing="0" cellpadding="0" border="0" class="linkSmall" onclick="document.getElementById('DIV_ALDDCNOD').style.display='block';document.getElementById('DIV_LINK_ALDDCNOD').style.display='none';document.FORM_ALDDCNOD.INPUT_DISPLAY.value='1';">
+        <tr>
+          <td><img src="/vrs/images/VRSPfeilRechtsBWkl.gif"></td>
+          <td style="padding-left:5px;text-decoration:underline;">Erweiterte Sucheinstellungen</td>
+        </tr>
+      </table>
+    </div>
+    <div id="DIV_ALDDCNOD" style="display:none;padding-left:5px;">
+      <form name="FORM_ALDDCNOD" onSubmit="return false;">
+        <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;">
+          <tr>
+            <td style="padding-top:10px;"><input type="checkbox" id="ALDDCNOD_CHECKBOX_HST" onclick="if (this.checked) { if ((node=document.getElementById('ALDDCNOD_CHECKBOX_HST_ABBR'))!=null) node.disabled=false;inputAEDBLCIF.setSearchClassStop(); } else { if ((node=document.getElementById('ALDDCNOD_CHECKBOX_HST_ABBR'))!=null) node.disabled=true;inputAEDBLCIF.unsetSearchClassStop(); } inputAEDBLCIF.repeatSearch();" checked="checked"></td>
+            <td style="padding-top:7px;padding-left:5px;"><table cellspacing="0" cellpadding="0" border="0"><tr><td>Haltestellen suchen</td><td style="padding-left:5px;"><img src="/vrs/images/SymbolHaltestelle.png" alt="Symbol Haltestelle" border="0"></td></tr></table></td>
+          </tr>
+          <!--tr>
+            <td></td>
+            <td style="padding-left:7px;">
+              <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;">
+                <tr>
+                  <td style="padding-top:10px;"><input type="checkbox" id="ALDDCNOD_CHECKBOX_HST_ABBR" onclick="if (this.checked) inputAEDBLCIF.setSearchClassStopWithAbbr(); else inputAEDBLCIF.unsetSearchClassStopWithAbbr(); inputAEDBLCIF.repeatSearch();"/></td>
+                  <td style="padding-top:7px;padding-left:5px;">Haltestellenkürzel berücksichtigen</td>
+                </tr>
+              </table>
+            </td>
+          </tr-->
+          <tr>
+            <td style="padding-top:10px;"><input type="checkbox" id="ALDDCNOD_CHECKBOX_ADR" onclick="if (this.checked) inputAEDBLCIF.setSearchClassAddress(); else inputAEDBLCIF.unsetSearchClassAddress(); inputAEDBLCIF.repeatSearch();" checked="checked"></td>
+            <td style="padding-top:7px;padding-left:5px;"><table cellspacing="0" cellpadding="0" border="0"><tr><td>Adressen suchen</td><td style="padding-left:5px;"><img src="/vrs/images/SymbolAdresse.png" alt="Symbol Adresse" border="0"></td></tr></table></td>            
+          </tr>
+          <tr>
+            <td style="padding-top:10px;"><input type="checkbox" id="ALDDCNOD_CHECKBOX_POI" onclick="if (this.checked) { var selectKategorie=document.getElementById('ALDDCNOD_SELECT_POI_KATEGORIE'); selectKategorie.disabled=false; if (0<selectKategorie.selectedIndex) inputAEDBLCIF.setFilterCategoryPOI(selectKategorie.options[selectKategorie.selectedIndex].text); else inputAEDBLCIF.setFilterCategoryPOI(null);inputAEDBLCIF.setSearchClassPOI(); } else { document.getElementById('ALDDCNOD_SELECT_POI_KATEGORIE').disabled=true; inputAEDBLCIF.unsetSearchClassPOI(); } inputAEDBLCIF.repeatSearch();" checked="checked"></td>
+            <td style="padding-top:7px;padding-left:5px;"><table cellspacing="0" cellpadding="0" border="0"><tr><td>Besondere Orte z.B. Sehenswürdigkeiten</td><td style="padding-left:5px;"><img src="/vrs/images/SymbolPOI.png" alt="Symbol besonderer Ort" border="0"></td></tr></table></td>            
+          </tr>
+          <tr>
+            <td></td>
+            <td style="padding-top:5px;padding-left:5px;">
+              <select id="ALDDCNOD_SELECT_POI_KATEGORIE" style="min-width:250px;" onchange="if (0<this.selectedIndex) inputAEDBLCIF.setFilterCategoryPOI(this.options[this.selectedIndex].text); else inputAEDBLCIF.setFilterCategoryPOI(null); inputAEDBLCIF.repeatSearch();">
+                <option>alle Kategorien</option>
+                <option>Alten- und Pflegeheim</option>
+                <option>Burg/Schloss</option>
+                <option>Campinganlage</option>
+                <option>Flugplatz</option>
+                <option>Fähre</option>
+                <option>Handwerk/Industriekultur</option>
+                <option>Kindergarten</option>
+                <option>Kirche/Kloster</option>
+                <option>Krankenhaus/Klinik</option>
+                <option>Museum</option>
+                <option>Mühle/Fachwerk</option>
+                <option>Natur/Parks</option>
+                <option>Park&Ride Plätze</option>
+                <option>Rathaus/Verwaltung</option>
+                <option>Schulen/Bildung</option>
+                <option>Schwimmbad/Therme</option>
+                <option>Sonstige</option>
+                <option>Sport-/Freizeitanlagen</option>
+                <option>Stadt/Denkmal</option>
+                <option>Unterhaltung</option>
+                <option>Wasser/Talsperre</option>
+                <option>Zoo/Tierpark</option>
+                <option>ÖPNV-Infocenter</option>              
+              </select>            
+            </td>
+          </tr>
+        </table>      
+        <table cellspacing="0" cellpadding="0" border="0" class="linkSmall" style="padding-top:5px" onclick="document.getElementById('DIV_ALDDCNOD').style.display='none';document.getElementById('DIV_LINK_ALDDCNOD').style.display='block';document.FORM_ALDDCNOD.INPUT_DISPLAY.value='0';">
+          <tr>
+            <td><img src="/vrs/images/VRSClose.gif"></td>
+            <td style="padding-left:5px;text-decoration:underline;">Erweiterte Sucheinstellungen ausblenden</td>
+          </tr>
+        </table>
+        <input type="text" name="INPUT_DISPLAY" style="display:none" value>
+      </form>
+    </div>                    
+  </div>
+	                      </td>
+		                  </tr>
+							      </table>  
+		              </div></div>
+</div></div>
+		            <div id="MNPDJDND">
+    <div id="DIV_VIA_LINK" style="padding-bottom:10px;">
+      <table cellspacing="0" cellpadding="0" border="0" class="link" onclick="eingabeRouteVia.show();">
+        <tr>
+          <td>
+            <img src="/vrs/images/VRSPfeilRechtsBWkl.gif">
+          </td>
+          <td style="padding-left:5px;text-decoration:underline;">Zwischenhalt einfügen</td>
+        </tr>
+      </table>
+    </div>
+    <div style="display:none;padding-bottom:10px;" id="DIV_VIA"><div class="formularBox" style="width:100%;">
+  <div class="headline1" style="width:100%">
+    <table cellspacing="0" cellpadding="0" border="0" style="width:100%">
+      <tr>
+        <td align="left"><div style="padding-left:10px;">Zwischenhalt</div></td>
+        <td align="right">
+          <table cellspacing="0" cellpadding="0" border="0" class="close" onclick="eingabeRouteVia.hide();eingabeRouteVia.reset();">
+            <tr>
+              <td style="text-decoration:underline;">entfernen</td>
+              <td style="padding-left:5px;padding-right:5px;">
+                <img src="/vrs/images/VRSCloseWhite.gif">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="content" style="width:100%"><div id="FMHFLEFG" style="padding:10px;">
+        <div id="CMNDFNJE" style="position:relative;z-index:145">
+    <form name="FORM_CMNDFNJE" onSubmit="return false;">      
+      <table cellspacing="0" cellpadding="0" border="0" style="width:100%">
+        <tr>
+          <td>
+            <div style="position:relative;">
+              <table cellspacing="0" cellpadding="0" border="0" class="boxInput" style="width:100%;margin:0px;padding:0px;">
+                <tr>
+                  <td onClick="document.getElementById('CMNDFNJE_INPUT').focus();" style="width:20px;vertical-align:middle;"><div id="CMNDFNJE_INPUT_SYMBOL" style="padding-left:2px;padding-right:2px;"><img src="/vrs/images/SymbolInput.png"></div></td>
+                  <td style="white-space:nowrap;padding-top:1px;width:100%"><input type="text" name="CMNDFNJE_text" id="CMNDFNJE_INPUT" maxlength="100" value onselectstart="window.event.cancelBubble=true; return true;" style="margin:0px;padding:0px;border-style:none;width:100%;"></td>
+                </tr>
+              </table>                 
+              <div style="position:absolute;width:100%;padding-top:1px;z-index:130;margin-bottom:0px;border:0px;">
+                <div id="CMNDFNJE_BOX_SELECTION" class="boxSelection" style="display:none;max-height:300px;overflow:auto;">
+                </div>
+              </div>
+            </div>
+          </td>           
+          <td style="padding-left:10px;width:100px;">
+            <div id="CMNDFNJE_BUTTON_SELECTION_DISABLED">
+              <div style="width:100px;height:21px" id="CCCCKLME">
+  <div style="position:relative;width:100%;height:100%" onclick="">
+    <table cellspacing="0" cellpadding="0" border="0" class="buttonDisabled" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+                  <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td>Vorschläge</td>
+                      <td style="padding-left:5px;"><img src="/vrs/images/PfeilUntenBW.png"></td>
+                    </tr>
+                  </table>
+                </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>
+            </div>
+            <div id="CMNDFNJE_BUTTON_SELECTION" style="display:none;">
+              <div style="width:100px;height:21px" id="NGMDHKEA">
+  <div style="position:relative;width:100%;height:100%" onclick="">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+                  <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td>Vorschläge</td>
+                      <td style="padding-left:5px;"><img src="/vrs/images/PfeilUnten.png"></td>
+                    </tr>
+                  </table>
+                </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>
+            </div>
+          </td>
+        </tr>
+      </table>    
+      <input type="text" name="history" id="CMNDFNJE_HISTORY" style="display:none" value>
+      <input type="text" name="historyData" id="CMNDFNJE_HISTORY_DATA" style="display:none" value>      
+    </form>
+  </div>
+        <form name="FORM_VIA" onSubmit="return false;">
+          <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;padding-top:5px;">
+            <tr>
+              <td>
+                <img src="/vrs/images/IVVPfeilRechtsEinfach.png">
+              </td>
+              <td style="padding-left:5px;">Gewünschte Aufenthaltszeit:</td>
+              <td style="padding-left:5px;">
+                <select name="SELECT_VIA_ZEIT_AUFENTHALT" onChange="eingabeRouteVia.changed();" style="font-size:90%;">
+                  <option value="0" style="padding-left:5px;padding-right:5px;" selected="selected">0 Minuten</option>
+                  <option value="300" style="padding-left:5px;padding-right:5px;">5 Minuten</option>
+                  <option value="600" style="padding-left:5px;padding-right:5px;">10 Minuten</option>
+                  <option value="900" style="padding-left:5px;padding-right:5px;">15 Minuten</option>
+                  <option value="1200" style="padding-left:5px;padding-right:5px;">20 Minuten</option>
+                  <option value="1800" style="padding-left:5px;padding-right:5px;">30 Minuten</option>
+                  <option value="3600" style="padding-left:5px;padding-right:5px;">60 Minuten</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+          <input type="text" name="INPUT_DISPLAY" style="display:none" value>
+        </form>
+      </div></div>
+</div></div>
+  </div>
+		            <div style="padding-bottom:10px;" id="GNMHMHMA"><div class="formularBox" style="width:100%;">
+	<div class="headline1" style="width:100%"><div style="padding-left:10px;">Ziel</div></div>
+	<div class="content" style="width:100%"><div id="ACJDOPGB" style="padding:10px;">
+		                <table cellspacing="0" cellpadding="0" border="0" style="width:100%">
+		                  <tr>
+		                    <td>
+					                <div id="FDKHHMND" style="position:relative;z-index:140">
+    <form name="FORM_FDKHHMND" onSubmit="return false;">      
+      <table cellspacing="0" cellpadding="0" border="0" style="width:100%">
+        <tr>
+          <td>
+            <div style="position:relative;">
+              <table cellspacing="0" cellpadding="0" border="0" class="boxInput" style="width:100%;margin:0px;padding:0px;">
+                <tr>
+                  <td onClick="document.getElementById('FDKHHMND_INPUT').focus();" style="width:20px;vertical-align:middle;"><div id="FDKHHMND_INPUT_SYMBOL" style="padding-left:2px;padding-right:2px;"><img src="/vrs/images/SymbolInput.png"></div></td>
+                  <td style="white-space:nowrap;padding-top:1px;width:100%"><input type="text" name="FDKHHMND_text" id="FDKHHMND_INPUT" maxlength="100" value onselectstart="window.event.cancelBubble=true; return true;" style="margin:0px;padding:0px;border-style:none;width:100%;"></td>
+                </tr>
+              </table>                 
+              <div style="position:absolute;width:100%;padding-top:1px;z-index:130;margin-bottom:0px;border:0px;">
+                <div id="FDKHHMND_BOX_SELECTION" class="boxSelection" style="display:none;max-height:300px;overflow:auto;">
+                </div>
+              </div>
+            </div>
+          </td>           
+          <td style="padding-left:10px;width:100px;">
+            <div id="FDKHHMND_BUTTON_SELECTION_DISABLED">
+              <div style="width:100px;height:21px" id="EEJHPEAB">
+  <div style="position:relative;width:100%;height:100%" onclick="">
+    <table cellspacing="0" cellpadding="0" border="0" class="buttonDisabled" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+                  <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td>Vorschläge</td>
+                      <td style="padding-left:5px;"><img src="/vrs/images/PfeilUntenBW.png"></td>
+                    </tr>
+                  </table>
+                </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>
+            </div>
+            <div id="FDKHHMND_BUTTON_SELECTION" style="display:none;">
+              <div style="width:100px;height:21px" id="DPPCJHKH">
+  <div style="position:relative;width:100%;height:100%" onclick="">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+                  <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td>Vorschläge</td>
+                      <td style="padding-left:5px;"><img src="/vrs/images/PfeilUnten.png"></td>
+                    </tr>
+                  </table>
+                </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>
+            </div>
+          </td>
+        </tr>
+      </table>    
+      <input type="text" name="history" id="FDKHHMND_HISTORY" style="display:none" value>
+      <input type="text" name="historyData" id="FDKHHMND_HISTORY_DATA" style="display:none" value>      
+    </form>
+  </div>
+		                    </td>
+		                    <td rowspan="2" style="vertical-align:top;width:80px;padding-left:10px;">
+		                      <div id="PJKGMMBC" style="height:21px;">
+  <div style="position:relative;width:100%;height:100%" onclick="var data; if ((eingabeRoute!=null) && ((data=eingabeRoute.getZiel())!=null)) eingabeRouteKarte.show(data.x,data.y); else eingabeRouteKarte.show();">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+		                          <table cellspacing="0" cellpadding="0" border="0">
+		                            <tr>
+		                              <td>Karte</td>
+		                              <td style="padding-left:5px;"><img src="/vrs/images/VRSKarteKlein.png"></td>
+		                            </tr>
+		                          </table>
+		                        </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>                     
+		                    </td>
+		                  </tr>
+		                  <tr>
+		                    <td>
+                          <div id="EJGDLKAH">
+    <div id="DIV_LINK_EJGDLKAH">
+      <table cellspacing="0" cellpadding="0" border="0" class="linkSmall" onclick="document.getElementById('DIV_EJGDLKAH').style.display='block';document.getElementById('DIV_LINK_EJGDLKAH').style.display='none';document.FORM_EJGDLKAH.INPUT_DISPLAY.value='1';">
+        <tr>
+          <td><img src="/vrs/images/VRSPfeilRechtsBWkl.gif"></td>
+          <td style="padding-left:5px;text-decoration:underline;">Erweiterte Sucheinstellungen</td>
+        </tr>
+      </table>
+    </div>
+    <div id="DIV_EJGDLKAH" style="display:none;padding-left:5px;">
+      <form name="FORM_EJGDLKAH" onSubmit="return false;">
+        <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;">
+          <tr>
+            <td style="padding-top:10px;"><input type="checkbox" id="EJGDLKAH_CHECKBOX_HST" onclick="if (this.checked) { if ((node=document.getElementById('EJGDLKAH_CHECKBOX_HST_ABBR'))!=null) node.disabled=false;inputFDKHHMND.setSearchClassStop(); } else { if ((node=document.getElementById('EJGDLKAH_CHECKBOX_HST_ABBR'))!=null) node.disabled=true;inputFDKHHMND.unsetSearchClassStop(); } inputFDKHHMND.repeatSearch();" checked="checked"></td>
+            <td style="padding-top:7px;padding-left:5px;"><table cellspacing="0" cellpadding="0" border="0"><tr><td>Haltestellen suchen</td><td style="padding-left:5px;"><img src="/vrs/images/SymbolHaltestelle.png" alt="Symbol Haltestelle" border="0"></td></tr></table></td>
+          </tr>
+          <!--tr>
+            <td></td>
+            <td style="padding-left:7px;">
+              <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;">
+                <tr>
+                  <td style="padding-top:10px;"><input type="checkbox" id="EJGDLKAH_CHECKBOX_HST_ABBR" onclick="if (this.checked) inputFDKHHMND.setSearchClassStopWithAbbr(); else inputFDKHHMND.unsetSearchClassStopWithAbbr(); inputFDKHHMND.repeatSearch();"/></td>
+                  <td style="padding-top:7px;padding-left:5px;">Haltestellenkürzel berücksichtigen</td>
+                </tr>
+              </table>
+            </td>
+          </tr-->
+          <tr>
+            <td style="padding-top:10px;"><input type="checkbox" id="EJGDLKAH_CHECKBOX_ADR" onclick="if (this.checked) inputFDKHHMND.setSearchClassAddress(); else inputFDKHHMND.unsetSearchClassAddress(); inputFDKHHMND.repeatSearch();" checked="checked"></td>
+            <td style="padding-top:7px;padding-left:5px;"><table cellspacing="0" cellpadding="0" border="0"><tr><td>Adressen suchen</td><td style="padding-left:5px;"><img src="/vrs/images/SymbolAdresse.png" alt="Symbol Adresse" border="0"></td></tr></table></td>            
+          </tr>
+          <tr>
+            <td style="padding-top:10px;"><input type="checkbox" id="EJGDLKAH_CHECKBOX_POI" onclick="if (this.checked) { var selectKategorie=document.getElementById('EJGDLKAH_SELECT_POI_KATEGORIE'); selectKategorie.disabled=false; if (0<selectKategorie.selectedIndex) inputFDKHHMND.setFilterCategoryPOI(selectKategorie.options[selectKategorie.selectedIndex].text); else inputFDKHHMND.setFilterCategoryPOI(null);inputFDKHHMND.setSearchClassPOI(); } else { document.getElementById('EJGDLKAH_SELECT_POI_KATEGORIE').disabled=true; inputFDKHHMND.unsetSearchClassPOI(); } inputFDKHHMND.repeatSearch();" checked="checked"></td>
+            <td style="padding-top:7px;padding-left:5px;"><table cellspacing="0" cellpadding="0" border="0"><tr><td>Besondere Orte z.B. Sehenswürdigkeiten</td><td style="padding-left:5px;"><img src="/vrs/images/SymbolPOI.png" alt="Symbol besonderer Ort" border="0"></td></tr></table></td>            
+          </tr>
+          <tr>
+            <td></td>
+            <td style="padding-top:5px;padding-left:5px;">
+              <select id="EJGDLKAH_SELECT_POI_KATEGORIE" style="min-width:250px;" onchange="if (0<this.selectedIndex) inputFDKHHMND.setFilterCategoryPOI(this.options[this.selectedIndex].text); else inputFDKHHMND.setFilterCategoryPOI(null); inputFDKHHMND.repeatSearch();">
+                <option>alle Kategorien</option>
+                <option>Alten- und Pflegeheim</option>
+                <option>Burg/Schloss</option>
+                <option>Campinganlage</option>
+                <option>Flugplatz</option>
+                <option>Fähre</option>
+                <option>Handwerk/Industriekultur</option>
+                <option>Kindergarten</option>
+                <option>Kirche/Kloster</option>
+                <option>Krankenhaus/Klinik</option>
+                <option>Museum</option>
+                <option>Mühle/Fachwerk</option>
+                <option>Natur/Parks</option>
+                <option>Park&Ride Plätze</option>
+                <option>Rathaus/Verwaltung</option>
+                <option>Schulen/Bildung</option>
+                <option>Schwimmbad/Therme</option>
+                <option>Sonstige</option>
+                <option>Sport-/Freizeitanlagen</option>
+                <option>Stadt/Denkmal</option>
+                <option>Unterhaltung</option>
+                <option>Wasser/Talsperre</option>
+                <option>Zoo/Tierpark</option>
+                <option>ÖPNV-Infocenter</option>              
+              </select>            
+            </td>
+          </tr>
+        </table>      
+        <table cellspacing="0" cellpadding="0" border="0" class="linkSmall" style="padding-top:5px" onclick="document.getElementById('DIV_EJGDLKAH').style.display='none';document.getElementById('DIV_LINK_EJGDLKAH').style.display='block';document.FORM_EJGDLKAH.INPUT_DISPLAY.value='0';">
+          <tr>
+            <td><img src="/vrs/images/VRSClose.gif"></td>
+            <td style="padding-left:5px;text-decoration:underline;">Erweiterte Sucheinstellungen ausblenden</td>
+          </tr>
+        </table>
+        <input type="text" name="INPUT_DISPLAY" style="display:none" value>
+      </form>
+    </div>                    
+  </div>  
+		                    </td>
+		                  </tr>
+		                </table>  
+		              </div></div>
+</div></div>            
+		            <div id="HFPECCDB">  
+    <div id="DIV_KARTE_LINK" style="padding-bottom:10px;">
+      <table cellspacing="0" cellpadding="0" border="0" class="link" onclick="eingabeRouteKarte.show();">
+        <tr>
+          <td>
+            <img src="/vrs/images/VRSPfeilRechtsBWkl.gif">
+          </td>
+          <td style="padding-left:5px;text-decoration:underline;">Karte einblenden</td>
+        </tr>
+      </table>
+    </div>
+    <div style="display:none;padding-bottom:10px;" id="DIV_KARTE"><div class="formularBox" style="width:100%;">
+  <div class="headline1" style="width:100%">
+    <table cellspacing="0" cellpadding="0" border="0" style="width:100%">
+      <tr>
+        <td align="left"><div style="padding-left:10px;">Karte</div></td>
+        <td align="right">
+          <table cellspacing="0" cellpadding="0" border="0" class="close" onclick="eingabeRouteKarte.hide();">
+            <tr>
+              <td style="text-decoration:underline;">ausblenden</td>
+              <td style="padding-left:5px;padding-right:5px;">
+                <img src="/vrs/images/VRSCloseWhite.gif">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="content" style="width:100%"><div id="JBNEHBNA" style="padding:10px;">
+        <form name="FORM_KARTE" onSubmit="return false;">
+          <div id="ACIABMKH" class="map" style="height:400px;">
+  <div style="position:relative;width:100%;height:100%;overflow:hidden;">
+    <table border="0" cellspacing="0" cellpadding="0" style="width:100%;height:100%;">
+      <tr>
+        <td id="HOT_FRAME_RD1_ACIABMKH" class="hotFrame" style="width:20%;height:20%;text-align:left;vertical-align:top;" onclick="mapACIABMKH.moveRightDown();" onmouseover="this.className='hotFrameOver';" onmouseout="this.className='hotFrame';"><img src="/vrs/images/hotFrameObenLinks.gif" width="7" height="7"></td>
+        <td class="hotFrame" style="width:60%;height:20%;text-align:center;vertical-align:top;" onclick="mapACIABMKH.moveDown();" onmouseover="this.className='hotFrameOver';" onmouseout="this.className='hotFrame';"><img src="/vrs/images/hotFrameOben.gif" width="7" height="7"></td>
+        <td id="HOT_FRAME_LD1_ACIABMKH" class="hotFrame" style="width:20%;height:20%;text-align:right;vertical-align:top;" onclick="mapACIABMKH.moveLeftDown();" onmouseover="this.className='hotFrameOver';" onmouseout="this.className='hotFrame';"><img src="/vrs/images/hotFrameObenRechts.gif" width="7" height="7"></td>
+      </tr>
+      <tr>
+        <td class="hotFrame" style="width:20%;height:60%" onclick="mapACIABMKH.moveRight();" onmouseover="this.className='hotFrameOver';" onmouseout="this.className='hotFrame';"><img src="/vrs/images/hotFrameLinks.gif" width="7" height="7"></td>
+        <td></td>
+        <td class="hotFrame" style="width:20%;height:60%" onclick="mapACIABMKH.moveLeft();" onmouseover="this.className='hotFrameOver';" onmouseout="this.className='hotFrame';"><img src="/vrs/images/hotFrameRechts.gif" width="7" height="7"></td>
+      </tr>
+      <tr>
+        <td id="HOT_FRAME_RU1_ACIABMKH" class="hotFrame" style="width:20%;height:20%;text-align:left;vertical-align:bottom;" onclick="mapACIABMKH.moveRightUp();" onmouseover="this.className='hotFrameOver';" onmouseout="this.className='hotFrame';"><img src="/vrs/images/hotFrameUntenLinks.gif" width="7" height="7"></td>
+        <td class="hotFrame" style="width:60%;height:20%;text-align:center;vertical-align:bottom;" onclick="mapACIABMKH.moveUp();" onmouseover="this.className='hotFrameOver';" onmouseout="this.className='hotFrame';"><img src="/vrs/images/hotFrameUnten.gif" width="7" height="7"></td>
+        <td id="HOT_FRAME_LU1_ACIABMKH" class="hotFrame" style="width:20%;height:20%;text-align:right;vertical-align:bottom;" onclick="mapACIABMKH.moveLeftUp();" onmouseover="this.className='hotFrameOver';" onmouseout="this.className='hotFrame';"><img src="/vrs/images/hotFrameUntenRechts.gif" width="7" height="7"></td>
+      </tr>
+    </table>
+    <div id="DIV_MAP_WINDOW_ACIABMKH" class="cursorDefault" style="position:absolute;display:block;left:0px;top:0px;right:0px;bottom:0px;height:auto;margin:10px;overflow:hidden;">
+      <div style="position:absolute;left:0px;top:0px;width:100%;height:100%;z-index:0;background-color:#FFFFFF;">&#160;</div>
+      <div id="DIV_MAP_LAYERS_ACIABMKH" style="position:absolute;left:0px;top:0px;width:100%;height:100%;z-index:1;"></div>
+      <div class="copyright" style="position:absolute;left:0px;bottom:0px;z-index:100;">
+		                <table cellspacing="0" cellpadding="0" border="0">
+		                  <tr>
+		                    <td>&#169;</td>
+		                    <td align="left">Ingenieurgruppe IVV GmbH &#38; Co.KG</td>
+		                  </tr>
+		                  <tr>
+		                    <td></td>
+		                    <td align="left">Geobasisdaten: Bezirksregierung Köln, GEObasis.NRW</td>
+		                  </tr>
+		                </table>
+		              </div>
+      <div style="position:absolute;left:10px;top:10px;z-index:100;">                    
+        <div id="BUTTON_BACK_DISABLED_ACIABMKH" style="position:absolute;left:0px;top:0px;width:20px;height:20px;z-index:100;" onmousedown="return events.stopPropagation(arguments[0]);">
+         <div id="ENICJIIB" style="height:21px;">
+  <div style="position:relative;width:100%;height:100%" onclick="">
+    <table cellspacing="0" cellpadding="0" border="0" class="buttonDisabled" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style=""><img src="/vrs/images/back_1_sw.gif" border="0"></td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>                        
+        </div>
+        <div id="BUTTON_BACK_ACIABMKH" style="position:absolute;left:0px;top:0px;width:20px;height:20px;z-index:100;" onmousedown="return events.stopPropagation(arguments[0]);">
+         <div id="CPHFAOPE" style="height:21px;">
+  <div style="position:relative;width:100%;height:100%" onclick="mapACIABMKH.history.backward();">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style=""><img src="/vrs/images/back_1.gif" border="0"></td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>                        
+        </div>
+        <div id="BUTTON_FORWARD_DISABLED_ACIABMKH" style="position:absolute;left:30px;top:0px;width:20px;height:20px;z-index:100;" onmousedown="return events.stopPropagation(arguments[0]);">
+         <div id="BEJAIAIF" style="height:21px;">
+  <div style="position:relative;width:100%;height:100%" onclick="">
+    <table cellspacing="0" cellpadding="0" border="0" class="buttonDisabled" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style=""><img src="/vrs/images/forward_1_sw.gif" border="0"></td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>                        
+        </div>
+        <div id="BUTTON_FORWARD_ACIABMKH" style="position:absolute;left:30px;top:0px;width:20px;height:20px;z-index:100;" onmousedown="return events.stopPropagation(arguments[0]);">
+         <div id="NKCDHGJC" style="height:21px;">
+  <div style="position:relative;width:100%;height:100%" onclick="mapACIABMKH.history.forward();">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style=""><img src="/vrs/images/forward_1.gif" border="0"></td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>                        
+        </div>
+        <div style="position:absolute;left:15px;top:40px;width:20px;height:20px;z-index:100;" onmousedown="return events.stopPropagation(arguments[0]);">
+          <div id="OGHDJOAE" style="height:21px;">
+  <div style="position:relative;width:100%;height:100%" onclick="mapACIABMKH.zoomIn();">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style=""><img src="/vrs/images/lupe_+_1.gif" border="0"></td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>
+        </div>       
+        <div style="position:absolute;left:23px;top:75px;border-style:solid;border-width:1px 2px 2px 1px;border-color:#FFFFFF #606060 #606060 #FFFFFF;z-index:100;">
+          <img src="/vrs/images/blank.gif" width="2" height="100" border="0">
+          <div id="BUTTON_SLIDER_ZOOM_ACIABMKH" class="slider" style="position:absolute;left:-12px;top:-4px;width:25px;height:7px;">
+            <table border="0" cellspacing="0" cellpadding="0" style="width:100%;height:100%;">
+              <tr>
+                <td style="text-align:center"><img src="/vrs/images/Schieber_11.png" width="18" height="5" border="0"></td>
+              </tr>
+            </table>            
+          </div>        
+        </div>
+        <div style="position:absolute;left:15px;top:190px;width:20px;height:20px;z-index:100;" onmousedown="return events.stopPropagation(arguments[0]);">
+          <div id="GFGGBKJE" style="height:21px;">
+  <div style="position:relative;width:100%;height:100%" onclick="mapACIABMKH.zoomOut();">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style=""><img src="/vrs/images/lupe_-_1.gif" border="0"></td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>
+        </div>                        
+        <div id="BUTTON_MAP_PAN_ACIABMKH" style="position:absolute;left:0px;top:220px;width:20px;height:20px;z-index:100;display:none;" onmousedown="return events.stopPropagation(arguments[0]);">
+         <div id="KHJGNNNB" style="height:21px;">
+  <div style="position:relative;width:100%;height:100%" onclick="mapACIABMKH.controlMouse.setModusMouseMovePan();document.getElementById('BUTTON_MAP_PAN_ACIABMKH').style.display='none';document.getElementById('BUTTON_MAP_PAN_ON_ACIABMKH').style.display='block';document.getElementById('BUTTON_MAP_ZOOM_ON_ACIABMKH').style.display='none';document.getElementById('BUTTON_MAP_ZOOM_ACIABMKH').style.display='block';">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style=""><img src="/vrs/images/hand_1.gif" border="0"></td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>                        
+        </div>
+        <div id="BUTTON_MAP_PAN_ON_ACIABMKH" style="position:absolute;left:0px;top:220px;width:20px;height:20px;z-index:100;" onmousedown="return events.stopPropagation(arguments[0]);">
+         <div id="HFMFHKDE" style="height:21px;">
+  <div style="position:relative;width:100%;height:100%" onclick="">
+    <table cellspacing="0" cellpadding="0" border="0" class="buttonOn" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style=""><img src="/vrs/images/hand_1.gif" border="0"></td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120-gelb.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>                        
+        </div>
+        <div id="BUTTON_MAP_ZOOM_ACIABMKH" style="position:absolute;left:30px;top:220px;width:20px;height:20px;z-index:100;" onmousedown="return events.stopPropagation(arguments[0]);">
+         <div id="ONHAAHLA" style="height:21px;">
+  <div style="position:relative;width:100%;height:100%" onclick="mapACIABMKH.controlMouse.setModusMouseMoveZoom();document.getElementById('BUTTON_MAP_PAN_ON_ACIABMKH').style.display='none';document.getElementById('BUTTON_MAP_PAN_ACIABMKH').style.display='block';document.getElementById('BUTTON_MAP_ZOOM_ON_ACIABMKH').style.display='block';document.getElementById('BUTTON_MAP_ZOOM_ACIABMKH').style.display='none';">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style=""><img src="/vrs/images/zoom_1.gif" border="0"></td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>                        
+        </div>
+        <div id="BUTTON_MAP_ZOOM_ON_ACIABMKH" style="position:absolute;left:30px;top:220px;width:20px;height:20px;z-index:100;display:none;" onmousedown="return events.stopPropagation(arguments[0]);">
+         <div id="OCLFBKJB" style="height:21px;">
+  <div style="position:relative;width:100%;height:100%" onclick="">
+    <table cellspacing="0" cellpadding="0" border="0" class="buttonOn" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style=""><img src="/vrs/images/zoom_1.gif" border="0"></td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120-gelb.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>                        
+        </div>
+      </div>                                                           
+      <div id="DIV_SLIDER_ACIABMKH" style="position:absolute;display:none;left:0px;top:0px;width:100%;height:100%;z-index:101;background-image:url('/vrs/images/blank.gif');cursor:pointer;">
+        <img src="/vrs/images/blank.gif" width="1" height="1" border="0">    
+      </div>
+                            
+      <div id="DIV_MAP_ZOOMBOX_ACIABMKH" class="zoomBox" style="position:absolute;z-index:101;display:none;"><!--  --></div>
+      <div>
+        <div id="OIJBBOJD">
+              <div id="DIV_CONTEXT_MENU_ACIABMKH" class="menuContext" style="position:absolute;visibility:hidden;z-index:200;">
+                <div>
+                  <div id="DIV_CONTEXT_MENU_INFO_OBJECT_ACIABMKH" style="display:none;">
+                    <table border="0" cellspacing="0" cellpadding="0" style="padding:5px;">
+                      <tr>
+                        <td>
+                          <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td style="vertical-align:top;"><img src="/vrs/images/K_Domabends.jpg" height="50px"></td>
+                              <td style="text-align:left;vertical-align:top;padding-left:5px;">
+                                <div id="DIV_CONTEXT_MENU_INFO_OBJECT_NAME_ACIABMKH" style="font-weight:bold"></div>
+                                <div id="DIV_CONTEXT_MENU_INFO_OBJECT_KATEGORIE_ACIABMKH"></div>
+                              </td>                  
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="border-bottom-style:solid;border-bottom-width:1px;border-color:#009966;">
+                          <div id="DIV_CONTEXT_MENU_INFO_OBJECT_LINK_ACIABMKH" style="margin-top:5px;margin-bottom:5px;">
+                            <table cellspacing="0" cellpadding="0" border="0" class="link" onclick="eingabeRouteKarte.show();">
+                              <tr>
+                                <td>
+                                  <img src="/vrs/images/VRSPfeilRechtsBWkl.gif">
+                                </td>
+                                <td style="padding-left:5px;text-decoration:underline;">Informationen anzeigen</td>
+                              </tr>
+                            </table>                            
+                          </div>              
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="DIV_CONTEXT_MENU_START_ACIABMKH" style="" onclick="eingabeRouteKarte.setStart();" onmouseover="this.className='over';" onmouseout="this.className='';">
+                    <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+                      <tr>
+                        <td style="width:25px;padding:2px 0px 2px 2px;"><img src="/vrs/images/startKlein.png" border="0"></td>
+                        <td style="padding-right:5px">Startpunkt setzen</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="DIV_CONTEXT_MENU_ZIEL_ACIABMKH" onclick="eingabeRouteKarte.setZiel();" onmouseover="this.className='over';" onmouseout="this.className='';">
+                    <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+                      <tr>
+                        <td style="width:25px;padding:2px 0px 2px 2px;"><img src="/vrs/images/zielKlein.png" border="0"></td>
+                        <td style="padding-right:5px">Zielpunkt setzen</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>                                             
+      </div>      
+    </div>    
+  </div>
+</div>
+          <input type="text" name="INPUT_DISPLAY" style="display:none" value>
+          <input type="text" name="INPUT_X" style="display:none" value>
+          <input type="text" name="INPUT_Y" style="display:none" value>
+          <input type="text" name="INPUT_RESOLUTION" style="display:none" value>
+        </form>
+      </div></div>
+</div></div>
+  </div>
+		            <div style="padding-bottom:10px;" id="PJLDKMCB"><div class="formularBox" style="width:100%;">
+	<div class="headline1" style="width:100%"><div style="padding-left:10px;">Datum & Uhrzeit</div></div>
+	<div class="content" style="width:100%"><div id="NLEELHLD" style="padding:10px;">
+		                <div id="CNACECOG">
+    <form name="FORM_DATE_TIME" onSubmit="return false;">
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td>
+            <table cellspacing="0" cellpadding="0" border="0" class="boxInput" style="width: 100px; margin: 0px; padding: 0px;">
+              <tr>
+                <td style="width: 100%; white-space: nowrap; padding-top: 1px;"><input type="text" id="CNACECOG_0_INPUT" maxlength="10" value style="margin: 0px; padding: 0px; border-style: none; width: 100%;" onselectstart="window.event.cancelBubble=true; return true;"></td>
+              </tr>
+            </table>
+          </td>
+          <td style="width:10px;">&#160;</td>
+          <td>
+            <div style="width:100px;height:21px" id="JHAFPPGG">
+  <div style="position:relative;width:100%;height:100%" onclick="if (inputCalendarGMDAIOLH.isVisible()) inputCalendarGMDAIOLH.hide();else inputCalendarGMDAIOLH.show(inputDatumCNACECOG.getDate(),events.getMousePositionX(event),events.getMousePositionY(event));">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td>Kalender</td>
+                    <td style="padding-left: 5px;"><img
+ src="/vrs/images/kalender.gif"></img
+></td>
+                  </tr>
+                </table>
+              </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>
+            <div id="HHAHACEB" style="width:250px;">
+    <div id="GMDAIOLH">
+    <div id="DIV_FORMULAR_BOX_POP_UP_GMDAIOLH" class="Fahrplanauskunft" style="display:none;position:absolute;left:0px;top:0px;">
+      <div class="overlay" style="position:absolute;left:0px;top:0px;width:100%;height:100%;z-index:300;" onclick="formularBoxPopUpGMDAIOLH.hide();">&#160;</div>
+      <div class="formularBox" style="position:absolute;left:0px;top:0px;z-index:300;">      
+        <div class="headline1" style="width:100%" onmousedown="formularBoxPopUpGMDAIOLH.mouseDownEvent(event);">
+          <table cellspacing="0" cellpadding="0" border="0" style="width:100%">
+            <tr>
+              <td align="left"><div style="padding-left:10px;">Kalender</div></td>
+              <td align="right">
+                <table cellspacing="0" cellpadding="0" border="0" class="close" onclick="formularBoxPopUpGMDAIOLH.hide();">
+                  <tr>
+                    <td style="text-decoration:underline;">schließen</td>
+                    <td style="padding-left:5px;padding-right:5px;">
+                      <img src="/vrs/images/VRSCloseWhite.gif">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="content" style="width:100%"><div class="calendar" id="AJECIOGG" style="padding:10px;">
+        <table cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;padding-bottom:5px;">
+          <tr>
+            <td align="left" style="width:25px;">
+              <div style="width:21px;height:21px;" id="AAIHCHOF">
+  <div style="position:relative;width:100%;height:100%" onclick="inputCalendarGMDAIOLH.createSheetPrevMonth();">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+                  <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td><img src="/vrs/images/search_l_kl.gif"></td>
+                    </tr>
+                  </table>
+                </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>                     
+            </td>
+            <td align="center" style="background-color:#F2F2F2;">
+              <span id="SPAN_MONAT_GMDAIOLH" style="font-weight:bold;"></span>
+            </td>
+            <td align="right" style="width:25px;">
+              <div style="width:21px;height:21px;" id="FLKAAICF">
+  <div style="position:relative;width:100%;height:100%" onclick="inputCalendarGMDAIOLH.createSheetNextMonth();">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+                  <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td><img src="/vrs/images/search_r_kl.gif"></td>
+                    </tr>
+                  </table>
+                </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>                     
+            </td>
+          </tr>
+        </table>
+        <table id="TABLE_GMDAIOLH" cellspacing="0" cellpadding="0" border="0" class="table" style="width:100%;table-layout:fixed;">
+          <tr style="background-color:#D4D4D4;">
+            <td style="height:21px;">Mo</td>
+            <td>Di</td>
+            <td>Mi</td>
+            <td>Do</td>
+            <td>Fr</td>
+            <td>Sa</td>
+            <td>So</td>
+          </tr>
+          <tr>
+            <td style="height:21px;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div></div>
+      </div>
+    </div>
+  </div>
+  </div>
+          </td>
+          <td style="width:30px;">&#160;</td>
+          <td>
+            <table cellspacing="0" cellpadding="0" border="0" class="boxInput" style="width: 80px; margin: 0px; padding: 0px;">
+              <tr>
+                <td style="width: 100%; white-space: nowrap; padding-top: 1px;"><input type="text" id="CNACECOG_1_INPUT" maxlength="8" value style="margin: 0px; padding: 0px; border-style: none; width: 80px;" onselectstart="window.event.cancelBubble=true; return true;"></td>
+              </tr>
+            </table>
+          </td>
+          <td style="width:30px;">&#160;</td>          
+          <td>
+            <table cellspacing="0" cellpadding="0" border="0" style="display:inline;margin-right:10px;">
+              <tr>
+                <td style="padding-top: 5px;">
+                  <input type="radio" name="RADIO_ABAN" value="ab" checked onclick="eingabeRoute.setSuchrichtungAb();">
+                </td>
+                <td style="padding-top: 2px; padding-left: 5px;">Abfahrt</td>
+              </tr>
+            </table>
+            <table cellspacing="0" cellpadding="0" border="0" style="display:inline;">
+              <tr>
+                <td style="padding-top: 5px;">
+                  <input type="radio" name="RADIO_ABAN" value="an" onclick="eingabeRoute.setSuchrichtungAn();">
+                </td>
+                <td style="padding-top: 2px; padding-left: 5px;">Ankunft</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+		              </div></div>
+</div></div>		            
+                <div id="EAICFGMG">
+    <div id="DIV_OPTIONEN_LINK" style="padding-bottom:10px;">
+      <table cellspacing="0" cellpadding="0" border="0" class="link" onclick="eingabeRouteOptionen.show();">
+        <tr>
+          <td>
+            <img src="/vrs/images/VRSPfeilRechtsBWkl.gif">
+          </td>
+          <td style="padding-left:5px;text-decoration:underline;">Sucheinstellungen</td>
+        </tr>
+      </table>
+    </div>
+    <div style="display:none;padding-bottom:10px;" id="DIV_OPTIONEN"><div class="formularBox" style="width:100%;">
+  <div class="headline1" style="width:100%">
+    <table cellspacing="0" cellpadding="0" border="0" style="width:100%">
+      <tr>
+        <td align="left"><div style="padding-left:10px;">Sucheinstellungen</div></td>
+        <td align="right">
+          <table cellspacing="0" cellpadding="0" border="0" class="close" onclick="eingabeRouteOptionen.hide();">
+            <tr>
+              <td style="text-decoration:underline;">ausblenden</td>
+              <td style="padding-left:5px;padding-right:5px;">
+                <img src="/vrs/images/VRSCloseWhite.gif">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="content" style="width:100%"><div id="GCGCEFFA" style="padding:10px;">
+        <form name="FORM_OPTIONEN" onSubmit="return false;">
+          <h1>Verkehrsmittel:</h1>
+          <div style="padding-left:5px;">
+            <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;">
+              <tr>
+                <td style="padding-top:5px;">
+                  <input type="checkbox" name="CHECKBOX_ZUSCHLAGFREI" value onclick="eingabeRouteOptionen.changed();" checked>
+                </td>
+                <td style="padding-top:2px;padding-left:5px;height:27px;">
+                  <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td>zuschlagfrei</td>
+                      <td style="padding-left:5px;"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>          
+            <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;width:100%;table-layout:fixed;padding-top:10px;">
+              <tr>
+                <td>
+                  <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;">
+                    <tr>
+                      <td style="padding-top:5px;">
+                        <input type="checkbox" name="CHECKBOX_ZUG_FERNVERKEHR" value onclick="eingabeRouteOptionen.changed();" checked>
+                      </td>
+                      <td style="padding-top:2px;padding-left:5px;height:27px;">
+                        <table cellspacing="0" cellpadding="0" border="0">
+                          <tr>
+                            <td>Bahn Fernverkehr</td>
+                            <td style="padding-left:5px;"><img src="/vrs/images/VMRegionalTrains.png" width="20" border="0"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>          
+                </td>
+                <td>
+                  <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;">
+                    <tr>
+                      <td style="padding-top:5px;">
+                        <input type="checkbox" name="CHECKBOX_ZUG_REGIONALVERKEHR" value onclick="eingabeRouteOptionen.changed();" checked>
+                      </td>
+                      <td style="padding-top:2px;padding-left:5px;height:27px;">
+                        <table cellspacing="0" cellpadding="0" border="0">
+                          <tr>
+                            <td>Bahn Regionalverkehr</td>
+                            <td style="padding-left:5px;"><img src="/vrs/images/VMRegionalTrains.png" width="20" border="0"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>          
+                </td>
+                <td>
+                  <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;">
+                    <tr>
+                      <td style="padding-top:5px;">
+                        <input type="checkbox" name="CHECKBOX_SBAHN" value onclick="eingabeRouteOptionen.changed();" checked>
+                      </td>
+                      <td style="padding-top:2px;padding-left:5px;height:27px;">
+                        <table cellspacing="0" cellpadding="0" border="0">
+                          <tr>
+                            <td>S-Bahn</td>
+                            <td style="padding-left:5px;"><img src="/vrs/images/VMSuburbanTrains.png" width="20" border="0"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>          
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;">
+                    <tr>
+                      <td style="padding-top:5px;">
+                        <input type="checkbox" name="CHECKBOX_STADTBAHN" value onclick="eingabeRouteOptionen.changed();" checked>
+                      </td>
+                      <td style="padding-top:2px;padding-left:5px;height:27px;">
+                        <table cellspacing="0" cellpadding="0" border="0">
+                          <tr>
+                            <td>Stadtbahn</td>
+                            <td style="padding-left:5px;"><img src="/vrs/images/VMLightRail.png" width="20" border="0"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>          
+                </td>
+                <td>
+                  <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;">
+                    <tr>
+                      <td style="padding-top:5px;">
+                        <input type="checkbox" name="CHECKBOX_BUS" value onclick="eingabeRouteOptionen.changed();" checked>
+                      </td>
+                      <td style="padding-top:2px;padding-left:5px;height:27px;">
+                        <table cellspacing="0" cellpadding="0" border="0">
+                          <tr>
+                            <td>Bus</td>
+                            <td style="padding-left:5px;"><img src="/vrs/images/VMBus.png" width="20" border="0"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>          
+                </td>
+                <td>
+                  <table cellspacing="0" cellpadding="0" border="0" style="font-size:12px;">
+                    <tr>
+                      <td style="padding-top:5px;">
+                        <input type="checkbox" name="CHECKBOX_BEDARFSVERKEHR" value onclick="eingabeRouteOptionen.changed();" checked>
+                      </td>
+                      <td style="padding-top:2px;padding-left:5px;height:27px;">
+                        <table cellspacing="0" cellpadding="0" border="0">
+                          <tr>
+                            <td>Bedarfsverkehr</td>
+                            <td style="padding-left:5px;"><img src="/vrs/images/VMOnDemandServices.png" width="20" border="0"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>          
+                </td>
+              </tr>
+            </table>
+          </div>          
+          <input type="text" name="INPUT_DISPLAY" style="display:none" value>
+        </form>
+      </div></div>
+</div></div>
+  </div>
+		            <!-- template template="EingabeRouteBarriere" name="barriere"/  -->
+		            <form action="/vrs/cgi/process/eingabeRoute" name="eingabe" method="post">
+		              <input type="hidden" name="start" value>
+		              <input type="hidden" name="startID" value>
+		              <input type="hidden" name="startTyp" value>
+		              <input type="hidden" name="via" value>
+		              <input type="hidden" name="viaID" value>
+		              <input type="hidden" name="viaTyp" value>
+		              <input type="hidden" name="viaZeitAufenthalt" value>
+		              <input type="hidden" name="ziel" value>
+		              <input type="hidden" name="zielID" value>
+		              <input type="hidden" name="zielTyp" value>
+		              <input type="hidden" name="datum" value>
+		              <input type="hidden" name="zeit" value>
+		              <input type="hidden" name="suchrichtung" value>
+		              <input type="hidden" name="barriere" value>
+                  <input type="hidden" name="zuschlagfrei" value>
+                  <input type="hidden" name="verkehrsmittel" value>
+		            </form>
+		            <table cellspacing="0" cellpadding="0" border="0" style="width:100%">
+		              <tr>
+		                <td style="width:100%;padding-top:10px;">
+		                  <div id="BUTTON_SUBMIT_DISABLED">
+			                  <div style="width:150px;height:35px;" id="JEIGDPEH">
+  <div style="position:relative;width:100%;height:100%" onclick="">
+    <table cellspacing="0" cellpadding="0" border="0" class="buttonDisabled" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+		                        <table cellspacing="0" cellpadding="0" border="0" style="height:35px;">
+		                          <tr>
+		                            <td style="font-size:120%">Jetzt suchen</td>
+		                            <td style="padding-left:5px;"><img src="/vrs/images/search_g_r.gif"></td>
+		                          </tr>
+		                        </table>
+			                    </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>
+		                  </div>                                  
+		                  <div id="BUTTON_SUBMIT" style="display:none;">
+		                    <div style="width:150px;height:35px;" id="PDHGHPKD">
+  <div style="position:relative;width:100%;height:100%" onclick="eingabeRoute.submit();">
+    <table cellspacing="0" cellpadding="0" border="0" class="button" style="position:relative;z-index:1;width:100%;height:100%">
+      <tr>
+        <td align="center" style="">
+		                        <table cellspacing="0" cellpadding="0" border="0">
+		                          <tr>
+		                            <td style="font-size:120%">Jetzt suchen</td>
+		                            <td style="padding-left:5px;"><img src="/vrs/images/search_r.gif"></td>
+		                          </tr>
+		                        </table>
+		                      </td>
+      </tr>
+    </table>
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:0;"><img src="/vrs//images/farbverlauf-120.jpg" style="width:100%;height:100%"></div>              
+  </div>
+</div>
+		                  </div>
+		                </td>
+		              </tr>
+		            </table>
+		            <div onclick="window.open('http://www.ivv-aachen.de');" class="copyright" style="cursor:pointer">&#169; 2011 Ingenieurgruppe IVV GmbH &#38; Co.KG</div>
+		          </div>
+		        </div></div><!--DMAILER_SECTION_BOUNDARY_END--></div>
+                                                                                                        
+            </div>            
+        </div>     
+                         
+                             
+      </div>            
+    </div>    
+    <div id="footer">
+        <div class="footer_content"><div class="footer_bar"><ul><li class="print-link"><a onclick="window.print(); return false;" href="#">Drucken</a></li><li class="send-link"><a href="http://www.vrsinfo.de/einzelseiten/seite-empfehlen.html?tipUrl=http%3A%2F%2Fwww.vrsinfo.de%2Findex.php%3Fid%3D332" target="_self">Empfehlen</a></li><li class="top-link"><a href="#top">Seitenanfang</a></li></ul></div><div class="newsletter" id="newsletter-german">
+<form name="tt_address_form" method="post" action="http://www.vrsinfo.de/index.php?id=59">
+<label>Newsletter Abo:</label>
+<!--###SUB_REQUIRED_FIELD_name### begin
+	This is shown only if the form is submitted and the field is configured to be "required" and at the same time not filled in.
+	The syntax is of the comment 'name' is: 	SUB_REQUIRED_FIELD_[enter-the-field-name-here]
+-->
+
+<!--###SUB_REQUIRED_FIELD_name### end -->
+<input class="newsletter_email" type="text" value="Ihre E-Mail-Adresse" onclick="if(this.value == 'Ihre E-Mail Adresse') this.value=''" id="newsletter_email" name="FE[tt_address][email]">
+<input type="image" name="whatever" src="http://www.vrsinfo.de/fileadmin/templates/images/button.png" class="submitbutton">
+
+
+</form>
+</div><!-- dies ist ein Test 1 --><div id="metanav"><ul><li><a href="http://www.vrsinfo.de/footer-menue/sitemap.html" title="Sitemap" onfocus="blurLink(this);">Sitemap</a></li><li>&#124;</li><li><a href="http://www.vrsinfo.de/footer-menue/impressum.html" title="Impressum" onfocus="blurLink(this);">Impressum</a></li></ul></div></div>        
+    </div>
+
+
+
+
+</div>		     	
+    </body>
+</html>

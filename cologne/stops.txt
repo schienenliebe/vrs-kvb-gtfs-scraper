@@ -1,0 +1,671 @@
+stop_id,stop_name,stop_lat,stop_lon
+667,Weiden West: Köln,49.8238,7.2980
+622,Im Hoppenkamp: Bergisch Gladbach-Bensberg,51.4256,9.4633
+228,Weiden Schulstr.: Köln,49.8238,7.2980
+247,Weiden Zentrum: Köln,49.8238,7.2980
+789,Bahnstr.: Köln-Weiden,50.8946,7.0578
+134,Mohnweg: Köln-Junkersdorf,50.9379,6.8554
+179,Rheinenergie-Stadion: Köln-Müngersdorf,50.9376,6.8746
+178,Alter Militärring: Köln-Müngersdorf,50.9377,6.8818
+173,Eupener Str.: Köln-Braunsfeld,50.9374,6.8893
+172,Clarenbachstift: Köln-Braunsfeld,50.9373,6.8944
+171,Maarweg: Köln-Braunsfeld,50.9372,6.8994
+170,Aachener Str./Gürtel: Köln-Braunsfeld,50.9370,6.9086
+136,Melaten: Köln-Lindenthal,50.9367,6.9168
+135,Universitätsstr.: Köln-Lindenthal,50.9366,6.9247
+25,Moltkestr.: Köln-Innenstadt,50.9355,6.9320
+24,Rudolfplatz: Köln-Innenstadt,50.9357,6.9391
+1,Neumarkt: Köln-Innenstadt,50.9356,6.9489
+0,Heumarkt: Köln-Innenstadt,50.9357,6.9600
+35,Deutzer Freiheit: Köln-Deutz,50.9366,6.9704
+37,Bf Deutz / Messe  LANXESS arena: Köln,51.3952,7.0901
+40,Deutz-Kalker Bad: Köln,50.9364,6.9862
+484,Kalk Post: Köln,50.9372,6.9948
+485,Kalk Kapelle: Köln,50.9372,6.9948
+489,Fuldaer Str.: Köln-Höhenberg,50.9415,7.0226
+490,Höhenberg Frankfurter Str.: Köln,50.9415,7.0226
+509,Kalker Friedhof: Köln-Merheim,50.9364,6.9862
+516,Flehbachstr.: Köln-Brück,50.9476,7.0727
+517,Brück Mauspfad: Köln,50.9829,7.5408
+633,Lustheide: Bergisch Gladbach-Refrath,50.9516,7.1026
+1869985,Wilhelm-Klein-Straße 1: 51427 Bergisch Gladbach (Refrath),50.9920,6.9412
+635,Kippekausen: Bergisch Gladbach-Frankenforst,50.9567,7.1298
+3234,Burgplatz: Bergisch Gladbach-Frankenforst,50.9571,7.1255
+632,Neuenweg: Bergisch Gladbach-Lückerath,50.9633,7.1426
+631,Kölner Str.: Bergisch Gladbach-Bensberg,50.9314,6.8575
+1268547,Johann-Bensberg-Str. 1: 51067 Köln (Holweide),50.9625,7.1495
+283,Ollenhauerring: Köln-Bocklemünd,50.9759,6.8712
+563,Dellbrück Hauptstr.: Köln,51.7766,8.6324
+229,Schaffrathsgasse: Köln-Bocklemünd,50.9715,6.8702
+268,Westfriedhof: Köln-Vogelsang,50.9674,6.8785
+267,Wolffsohnstr.: Köln-Vogelsang,50.9651,6.8846
+250,Akazienweg: Köln-Bickendorf,50.9612,6.8928
+248,Äußere Kanalstr.: Köln-Bickendorf,50.9570,6.9020
+241,Leyendeckerstr.: Köln-Ehrenfeld,50.9544,6.9100
+237,Venloer Str./Gürtel: Köln-Ehrenfeld,50.9501,6.9168
+224,Körnerstr.: Köln-Ehrenfeld,50.9483,6.9203
+223,Piusstr.: Köln-Ehrenfeld,50.9460,6.9258
+28,Hans-Böckler-Platz/Bf West: Köln-Innenstadt,50.9440,6.9344
+27,Friesenplatz: Köln-Innenstadt,50.9405,6.9400
+6,Appellhofplatz: Köln-Innenstadt,50.9400,6.9505
+2,Poststr.: Köln-Innenstadt,50.9312,6.9501
+9,Severinstr.: Köln-Innenstadt,50.9291,6.9569
+36,Suevenstr.: Köln-Deutz,50.9330,6.9767
+38,Koelnmesse: Köln-Deutz,50.9428,6.9817
+537,Stegerwaldsiedlung: Köln-Mülheim,50.9482,6.9929
+539,Buchforst Waldecker Str.: Köln,50.9510,7.0050
+545,Buchheim Frankfurter Str.: Köln,50.9531,7.0141
+546,Buchheim Herler Str.: Köln,50.9531,7.0141
+547,Wichheimer Str.: Köln-Buchheim,50.9615,7.0313
+551,Holweide Vischeringstr.: Köln,50.9584,7.0411
+552,Maria-Himmelfahrt-Str.: Köln-Holweide,50.9679,7.0453
+553,Neufelder Str. (Krankenhaus Holweide): Köln,50.9695,7.0556
+562,Dellbrück Mauspfad: Köln,51.7766,8.6324
+564,Thielenbruch: Köln-Dellbrück,50.9780,7.0855
+577,Odenthaler Str.: Köln-Dünnwald,51.0013,7.0424
+6460,P&R Köln-Schlebusch (Stadtbahn),50.8029,6.7876
+852,Sparkasse Am Butzweilerhof: Köln-Ossendorf,50.9853,6.8875
+31,Ebertplatz: Köln-Innenstadt,50.9506,6.9588
+863,IKEA Am Butzweilerhof: Köln-Ossendorf,50.8610,6.9744
+260,Alter Flughafen Butzweilerhof: Köln-Ossendorf,50.9377,6.8818
+258,Rektor-Klein-Str.: Köln-Ossendorf,50.9742,6.9047
+259,Margaretastr.: Köln-Ossendorf,50.9682,6.9056
+235,Iltisstr.: Köln-Neuehrenfeld,50.9652,6.9121
+234,Lenauplatz: Köln-Neuehrenfeld,50.9585,6.9184
+233,Nußbaumerstr.: Köln-Neuehrenfeld,50.9570,6.9236
+232,Subbelrather Str./Gürtel: Köln-Neuehrenfeld,50.9547,6.9213
+226,Liebigstr.: Köln-Ehrenfeld,50.9523,6.9242
+225,Gutenbergstr.: Köln-Ehrenfeld,50.9503,6.9283
+7,Dom / Hbf: Köln-Innenstadt,50.9429,6.9586
+8,Breslauer Platz/Hbf: Köln-Innenstadt,50.9443,6.9587
+1291538,Ebertplatz 1: 50668 Köln (Neustadt-Nord),50.9506,6.9588
+30,Reichenspergerplatz: Köln-Innenstadt,50.9540,6.9643
+1291540,Ebertplatz 3: 50668 Köln (Neustadt-Nord),50.9506,6.9588
+673,Frechen-Benzelrath,50.9041,6.7971
+215,Rosenhügel: Köln-Zündorf,50.8741,7.0601
+674,Mühlengasse: Frechen-Mitte,50.9082,6.8019
+675,Frechen Rathaus,50.9115,6.8227
+676,Frechen Kirche,50.9115,6.8227
+7382,Königsdorf Bf: Frechen,50.9426,6.7567
+678,Haus Vorst: Köln-Marsdorf,51.2660,6.7615
+221,Stüttgenhof: Köln-Marsdorf,50.9200,6.8766
+164,Brahmsstr.: Köln-Lindenthal,50.9259,6.8983
+162,Dürener Str./Gürtel: Köln-Lindenthal,50.9277,6.9089
+161,Wüllnerstr.: Köln-Lindenthal,50.9312,6.9080
+41,Severinsbrücke: Köln-Deutz,50.9304,6.9725
+42,Drehbrücke: Köln-Deutz,50.9284,6.9750
+43,Poller Kirchweg: Köln-Deutz,50.9236,6.9801
+425,Raiffeisenstr.: Köln-Poll,50.9200,6.9860
+419,Poll Salmstr.: Köln,50.9160,6.9928
+420,Baumschulenweg: Köln-Poll,50.9148,7.0000
+430,Westhoven Kölner Str.: Köln,50.9067,7.0148
+431,Westhoven Berliner Str.: Köln,50.9067,7.0148
+432,Ensen Gilgaustr.: Köln,50.8995,7.0312
+433,Ensen Kloster: Köln,50.8995,7.0312
+447,Porz Steinstr.: Köln,50.8915,7.0692
+448,Porz Markt: Köln,50.8915,7.0692
+1257192,Mühlengasse 1: 50999 Köln (Sürth),50.9082,6.8019
+158,Sülz Hermeskeiler Platz: Köln,50.9215,6.9336
+525,Röttgensweg: Köln-Rath/Heumar,50.9202,7.0906
+157,Mommsenstr.: Köln-Sülz,50.9191,6.9104
+156,Zülpicher Str./Gürtel: Köln-Sülz,50.9311,6.9408
+147,Lindenburg (Universitätskliniken): Köln-Sülz,50.9222,6.9217
+146,Weyertal: Köln-Sülz,50.9240,6.9270
+145,Universität: Köln-Sülz,50.9258,6.9310
+22,Dasselstr./Bf Süd: Köln-Innenstadt,50.9284,6.9360
+21,Zülpicher Platz: Köln-Innenstadt,50.9311,6.9408
+3,Mauritiuskirche: Köln-Innenstadt,50.9342,6.9451
+493,Vingst: Köln,50.9328,7.0217
+249,Alter Deutzer Postweg: Köln-Ostheim,50.9377,6.8818
+504,Autobahn (Stadtbahn): Köln-Ostheim,50.9271,7.0538
+523,Steinweg: Köln-Rath/Heumar,50.9236,7.0668
+524,Porzer Str.: Köln-Rath/Heumar,50.9216,7.0751
+527,Königsforst: Köln-Rath/Heumar,50.9197,7.0969
+50,Zollstock Südfriedhof: Köln,50.9164,6.9415
+398,Merkenich Mitte: Köln,51.0244,6.9530
+49,Zollstockgürtel: Köln-Zollstock,50.9052,6.9422
+48,Gottesweg: Köln-Zollstock,50.9103,6.9416
+47,Herthastr.: Köln-Zollstock,50.9129,6.9408
+46,Pohligstr.: Köln-Zollstock,50.9164,6.9415
+18,Eifelplatz: Köln-Innenstadt,50.9233,6.9435
+19,Eifelstr.: Köln-Innenstadt,50.9266,6.9457
+20,Barbarossaplatz: Köln-Innenstadt,50.9286,6.9428
+29,Christophstr./Mediapark: Köln-Innenstadt,50.9447,6.9425
+32,Hansaring: Köln-Innenstadt,50.9490,6.9524
+1291539,Ebertplatz 2: 50668 Köln (Neustadt-Nord),50.9506,6.9588
+290,Lohsestr.: Köln-Nippes,50.9581,6.9553
+289,Florastr.: Köln-Nippes,50.9650,6.9537
+288,Neusser Str./Gürtel: Köln-Nippes,50.9723,6.9514
+318,Mollwitzstr.: Köln-Weidenpesch,50.9782,6.9488
+319,Scheibenstr.: Köln-Weidenpesch,50.9857,6.9463
+344,Wilhelm-Sollmann-Str.: Köln-Longerich,50.9920,6.9412
+324,Niehl: Köln,50.9948,6.9557
+349,Geestemünder Str.: Köln-Niehl,51.0019,6.9553
+350,Fordwerke Süd: Köln-Niehl,51.0058,6.9554
+351,Fordwerke Mitte: Köln-Niehl,51.0058,6.9554
+352,Fordwerke Nord: Köln-Niehl,51.0058,6.9554
+1291541,Ebertplatz 4: 50668 Köln (Neustadt-Nord),50.9506,6.9588
+152,Sülzgürtel: Köln-Klettenberg,50.9123,6.9240
+154,Berrenrather Str./Gürtel: Köln-Sülz,50.9170,6.9237
+542,Bf Mülheim: Köln,51.3952,7.0901
+540,Mülheim Wiener Platz: Köln-Mitte,50.4488,6.6838
+300,Slabystr.: Köln-Riehl,50.9666,6.9882
+302,Amsterdamer Str./Gürtel: Köln-Riehl,50.9708,6.9691
+308,Geldernstr./Parkgürtel: Köln-Bilderstöckchen,50.9685,6.9413
+309,Escher Str.: Köln-Bilderstöckchen,50.9645,6.9338
+240,Weinsbergstr./Gürtel: Köln-Ehrenfeld,50.9451,6.9128
+174,Oskar-Jäger-Str./Gürtel: Köln-Braunsfeld,50.9398,6.9110
+165,Gleueler Str./Gürtel: Köln-Lindenthal,50.9238,6.9123
+155,Euskirchener Str.: Köln-Sülz,50.9180,6.9167
+14,Ubierring: Köln-Innenstadt,50.9224,6.9655
+366,Heimersdorf: Köln,51.0121,6.9069
+15,Chlodwigplatz: Köln-Innenstadt,50.9212,6.9604
+16,Ulrepforte: Köln-Innenstadt,50.9239,6.9521
+345,Altonaer Platz: Köln-Longerich,50.9938,6.9334
+346,Herforder Str.: Köln-Longerich,50.9946,6.9262
+337,Meerfeldstr.: Köln-Longerich,50.9950,6.9208
+317,Longericher Str. Nord: Köln-Bilderstöckchen,50.9834,6.9134
+367,Chorweiler: Köln,51.0211,6.8980
+353,Bad Godesberg Stadthalle: Bonn,50.6581,7.2100
+777,Nesselrodestr.: Köln-Niehl,50.9769,6.9689
+153,Bad Godesberg Bf: Bonn,50.6581,7.2100
+666,Plittersdorfer Str.: Bonn-Bad Godesberg,50.6878,7.1539
+665,Wurzerstr.: Bonn-Plittersdorf,50.6915,7.1480
+664,Hochkreuz/Deutsches Museum Bonn,50.6967,7.1415
+663,Max-Löbner-Str./Friesdorf: Bonn,50.7008,7.1375
+655,Dt. Telekom/Olof-Palme-Allee: Bonn-Gronau,50.7068,7.1311
+656,Dt. Telekom/Ollenhauerstr.: Bonn-Gronau,50.7068,7.1311
+657,Heussallee/Museumsmeile: Bonn-Gronau,50.7167,7.1206
+648,Museum Koenig: Bonn-Innenstadt,50.7217,7.1146
+649,Bundesrechnungshof/Auswärtiges Amt: Bonn-Innenstadt,50.7255,7.1116
+650,Juridicum: Bonn-Innenstadt,50.7301,7.1085
+651,Universität/Markt: Bonn-Innenstadt,50.7323,7.1022
+843,Parkhaus Hauptbahnhof: Köln,50.5574,6.2401
+39,Propsthof Nord: Bonn-Innenstadt,50.7391,7.0735
+658,Tannenbusch Süd: Bonn,50.7423,7.0556
+659,Tannenbusch Mitte: Bonn,50.7423,7.0556
+660,Buschdorf: Bonn,50.7580,7.0466
+643,Hersel: Bornheim,50.7700,7.0428
+644,Uedorf: Bornheim-Hersel,50.7816,7.0319
+645,Widdig: Bornheim-Hersel,50.7911,7.0226
+1634908,Schmiedegasse 1: 50389 Wesseling (Urfeld),50.9771,6.9358
+705,Wesseling Süd,50.8226,6.9800
+117,Wesselinger Str.: Köln-Sürth,50.8603,7.0046
+707,Wesseling Nord,50.8226,6.9800
+126,Godorf Bf: Köln,50.8475,6.9786
+116,Sürth Bf: Köln,50.8641,7.0035
+100,Michaelshoven: Köln-Rodenkirchen,50.8762,6.9989
+99,Siegstr. (Stadtbahn): Köln-Rodenkirchen,50.8833,6.9947
+98,Rodenkirchen Bf: Köln,50.8909,6.9901
+846,Heinrich-Lübke-Ufer: Köln-Marienburg,50.8999,6.9848
+69,Bayenthalgürtel: Köln-Marienburg,50.9069,6.9778
+58,Schönhauser Str.: Köln-Bayenthal,50.9141,6.9721
+301,Kinderkrankenhaus: Köln-Riehl,50.9632,6.9684
+325,Niehl Sebastianstr.: Köln,50.9948,6.9557
+1549647,Kölnstraße 1: 50321 Brühl,50.9312,6.9501
+4515,Sechtem Bf: Bornheim,50.7866,6.9482
+7402,Roisdorf Bf: Bornheim,50.7542,7.0076
+4596,Kalscheuren Bf: Hürth,50.8759,6.9098
+73,Marienburg Südpark: Köln,50.9069,6.9778
+72,Marienburger Str.: Köln-Marienburg,50.9012,6.9737
+71,Goltsteinstr./Gürtel: Köln-Marienburg,50.9047,6.9715
+61,Tacitusstr.: Köln-Bayenthal,50.9096,6.9696
+60,Koblenzer Str.: Köln-Bayenthal,50.9125,6.9672
+744,Bonntor: Köln-Bayenthal,50.9145,6.9621
+17,Alteburger Wall: Köln-Innenstadt,50.9164,6.9610
+709,Rheinauhafen: Köln-Innenstadt,50.9252,6.9654
+684,Schokoladenmuseum: Köln-Innenstadt,50.9325,6.9629
+379,Fühlinger Weg: Köln-Volkhoven/Weiler,51.0205,6.8881
+753,Im Wichemshof: Köln-Roggendorf,51.4256,9.4633
+405,Further Str.: Köln-Roggendorf,51.0434,6.8473
+382,Wezelostr.: Köln-Volkhoven/Weiler,51.0214,6.8847
+404,Baptiststr.: Köln-Roggendorf,51.0471,6.8495
+403,Walter-Dodde-Weg: Köln-Roggendorf,51.0488,6.8513
+402,Worringen S-Bahn: Köln,51.0518,6.8522
+6802,Blumenberg (S): Köln,51.0352,6.8886
+7388,Chorweiler Nord (S): Köln,51.0211,6.8980
+368,Karl-Marx-Allee: Köln-Chorweiler,51.0243,6.9043
+385,Weichselring: Köln-Chorweiler,51.0257,6.8964
+389,Langel Fähre: Köln-Langel linksrheinisch,51.0527,6.9146
+797,Friedr.-Karl-Str./Neusser Str.: Köln-Mauenheim,50.9751,6.9494
+390,Langel Nord: Köln-Langel linksrheinisch,51.0527,6.9146
+391,Langel Mohlenweg: Köln-Langel linksrheinisch,51.0527,6.9146
+392,Langel Kuhlenweg: Köln-Langel linksrheinisch,51.0527,6.9146
+393,Rheinkassel: Köln,51.0394,6.9329
+401,Kasselberg: Köln,51.0366,6.9394
+400,Schlettstadter Str.: Köln-Merkenich,51.0305,6.9519
+295,Bergstr.: Köln-Weidenpesch,49.5536,8.6658
+749,Trifelsstr.: Köln-Bilderstöckchen,50.9726,6.9340
+735,Mülhauser Str.: Köln-Bilderstöckchen,50.9752,6.9301
+315,Am Bilderstöckchen: Köln,52.1527,5.3708
+849,CöllnParc: Köln-Bilderstöckchen,50.9770,6.9215
+316,Robert-Perthel-Str.: Köln-Bilderstöckchen,50.9804,6.9186
+817,Hugo-Junkers-Str.: Köln-Longerich,50.9875,6.9102
+343,Dädalusring: Köln-Longerich,50.9905,6.9062
+341,Lindweilerweg: Köln-Longerich,50.9953,6.9016
+342,Dionysstr.: Köln-Longerich,50.9971,6.9067
+339,Longerich Friedhof: Köln,50.9950,6.9208
+798,Stommeler Str.: Köln-Longerich,50.9990,6.9124
+340,Longerich S-Bahn: Köln,50.9950,6.9208
+374,Marienberger Weg: Köln-Lindweiler,51.0000,6.8928
+375,Lindweilerfeld: Köln-Lindweiler,51.0031,6.8896
+376,Unnauer Weg: Köln-Lindweiler,51.0065,6.8902
+384,Volkhovener Weg: Köln-Volkhoven/Weiler,51.0144,6.8934
+812,Florenzer Str.: Köln-Chorweiler,51.0228,6.8937
+378,Merianstr.: Köln-Chorweiler,51.0273,6.9102
+397,Robert-Bosch-Str.: Köln-Rheinkassel,51.0321,6.9195
+811,Feldkasseler Weg: Köln-Rheinkassel,51.0346,6.9229
+810,Marconistr.: Köln-Rheinkassel,51.0339,6.9284
+814,Marconistr. Ost: Köln-Rheinkassel,51.0339,6.9284
+809,Morsestr.: Köln-Rheinkassel,51.0378,6.9227
+396,Edsel-Ford-Str.: Köln-Rheinkassel,51.0303,6.9229
+395,Rheinlandstr.: Köln-Rheinkassel,51.0267,6.9284
+394,Oranjehofstr.: Köln-Rheinkassel,51.0254,6.9396
+347,Bremerhavener Str.: Köln-Longerich,50.9973,6.9369
+1214858,Am Zehnthof 1: 50999 Köln (Sürth),52.1527,5.3708
+669,Sinnersdorf Kirche: Pulheim,51.0236,6.8172
+671,Kesselsgasse: Pulheim-Sinnersdorf,51.0223,6.8222
+361,Sinnersdorfer Mühle: Köln-Esch,51.0177,6.8350
+360,Johannes-Prassel-Str.: Köln-Esch,51.0145,6.8471
+358,Chorbuschstr.: Köln-Esch,51.0127,6.8578
+813,Esch Friedhof: Köln,51.0127,6.8578
+381,Blockstr.: Köln-Volkhoven/Weiler,51.0219,6.8759
+380,Friedhof Chorweiler: Köln-Volkhoven/Weiler,49.9884,7.2696
+278,Grevenbroicher Str.: Köln-Bocklemünd,50.9728,6.8660
+279,Nattermannallee: Köln-Bocklemünd,50.9772,6.8605
+280,Dohmengasse: Köln-Bocklemünd,50.9806,6.8578
+287,Buschweg: Köln-Bocklemünd,50.9846,6.8603
+282,Auweilerweg: Köln-Bocklemünd,50.9869,6.8588
+354,Heinering: Köln-Pesch,50.9961,6.8725
+355,Pesch Schulstr.: Köln,50.9961,6.8725
+357,Hermann-Löns-Str.: Köln-Auweiler,51.0051,6.8535
+836,Havelstr.: Köln-Chorweiler,51.0269,6.8885
+834,Weserpromenade: Köln-Chorweiler,51.0327,6.8886
+835,Neißestr.: Köln-Chorweiler,51.0299,6.8939
+34,Krefelder Wall: Köln-Innenstadt,50.9542,6.9504
+297,Merheimer Platz: Köln-Nippes,50.9579,6.9499
+796,Zonser Str.: Köln-Nippes,50.9588,6.9492
+296,Sechzigstr.: Köln-Nippes,50.9582,6.9448
+715,Nippes S-Bahn: Köln,50.9723,6.9514
+774,Osterather Str.: Köln-Bilderstöckchen,50.9585,6.9394
+310,Nievenheimer Str.: Köln-Bilderstöckchen,50.9627,6.9403
+311,Ludwigsburger Str.: Köln-Bilderstöckchen,50.9657,6.9402
+312,Frankenthaler Str.: Köln-Bilderstöckchen,50.9690,6.9362
+313,Ebernburgweg: Köln-Bilderstöckchen,50.9690,6.9322
+314,Alzeyer Str.: Köln-Bilderstöckchen,50.9701,6.9269
+805,Franziska-Anneke-Str.: Köln-Ossendorf,50.9721,6.9141
+256,Mühlenweg: Köln-Ossendorf,50.9704,6.8911
+261,Hugo-Eckener-Str.: Köln-Ossendorf,50.9775,6.8910
+263,Von-Hünefeld-Str.: Köln-Ossendorf,50.9773,6.8855
+284,Nüssenberger Str.: Köln-Bocklemünd,50.9769,6.8651
+285,Görlinger Zentrum: Köln-Bocklemünd,50.9798,6.8653
+286,Heinrich-Mann-Str.: Köln-Bocklemünd,50.9833,6.8652
+845,Schumacherring: Köln-Bocklemünd,50.9841,6.8700
+364,Gewerbegebiet Pesch: Köln,51.0043,6.8727
+363,Otto-Müller-Str.: Köln-Pesch,51.0004,6.8789
+362,Pescher Weg: Köln-Pesch,50.9997,6.8823
+112,Konrad-Adenauer-Str.: Köln-Rodenkirchen,50.8904,6.9861
+118,Marktplatz Sürth: Köln,50.8622,7.0075
+149,Sülzburgstr./Berrenrather Str.: Köln-Sülz,50.9170,6.9237
+81,Frankenstr.: Köln-Meschenich,50.8533,6.9280
+82,Engeldorfer Hof: Köln-Meschenich,50.8590,6.9286
+717,Auf der Freiheit: Köln-Meschenich,51.1535,7.0218
+78,Am Kölnberg: Köln-Meschenich,52.1527,5.3708
+92,Westerwaldstr.: Köln-Rondorf,50.8721,6.9468
+91,Bödinger Str.: Köln-Rondorf,50.8744,6.9509
+90,Rondorf: Köln,50.8738,6.9548
+837,Habichtstr.: Köln-Rondorf,50.8762,6.9587
+89,Lerchenweg: Köln-Hochkirchen,50.8776,6.9609
+87,Bonner Landstr.: Köln-Hochkirchen,50.9041,6.9645
+804,Lindenweg: Köln-Hochkirchen,50.9511,6.8627
+68,Wasserwerk: Köln-Raderthal,50.8886,6.9665
+77,Arnoldshöhe: Köln-Marienburg,50.8952,6.9669
+76,Leyboldstr.: Köln-Marienburg,50.8978,6.9662
+75,Gaedestr.: Köln-Marienburg,50.9008,6.9655
+74,Bonner Str./Gürtel: Köln-Marienburg,50.9041,6.9645
+63,Cäsarstr.: Köln-Bayenthal,50.9062,6.9638
+62,Mannsfeld: Köln-Bayenthal,50.9105,6.9626
+59,Marktstraße: Köln-Bayenthal,50.9120,6.9622
+13,Severinskirche: Köln-Innenstadt,50.9232,6.9602
+11,Rosenstr.: Köln-Innenstadt,50.9266,6.9587
+10,Waidmarkt: Köln-Innenstadt,50.9323,6.9563
+4,Gürzenichstr.: Köln-Innenstadt,50.9362,6.9580
+5,Rathaus: Köln-Innenstadt,50.9383,6.9582
+417,Andreaskloster: Köln-Innenstadt,50.9425,6.9545
+861,Im Rheintal: Köln-Meschenich,51.4256,9.4633
+79,Meschenich Kirche: Köln,50.8629,6.9280
+80,Engeldorfer Str.: Köln-Meschenich,50.8590,6.9286
+5948,Rodenkirchener Str.: Hürth-Kalscheuren,50.8766,6.9142
+5756,Am Kreuzweg: Köln-Meschenich,52.1527,5.3708
+65,Liblarer Str.: Köln-Raderthal,50.9003,6.9517
+67,Brühler Str./Gürtel: Köln-Raderthal,50.9038,6.9568
+57,Rheinsteinstr.: Köln-Raderberg,50.9072,6.9597
+106,Uferstr.: Köln-Rodenkirchen,50.8917,7.0098
+83,Kettelerstr.: Köln-Meschenich,50.8610,6.9321
+104,Grimmelshausenstr.: Köln-Rodenkirchen,50.8904,7.0023
+108,Siegfriedstr.: Köln-Rodenkirchen,50.8878,6.9979
+103,Rodenkirchen Rathaus: Köln,50.8909,6.9901
+101,Maternusplatz: Köln-Rodenkirchen,50.8927,6.9937
+113,Schwabenstr.: Köln-Rodenkirchen,50.8871,6.9897
+114,Schillingsrotter Str.: Köln-Rodenkirchen,50.8845,6.9898
+115,Am Neuen Forst: Köln-Rodenkirchen,52.1527,5.3708
+95,Kirschbaumweg: Köln-Hahnwald,50.8728,6.9935
+96,Mannesmannstr.: Köln-Hahnwald,50.8688,6.9913
+824,IKEA Godorf: Köln,50.8610,6.9744
+128,Otto-Hahn-Str.: Köln-Godorf,50.8581,6.9747
+129,Bunsenstr.: Köln-Godorf,50.8536,6.9752
+127,Pierstr.: Köln-Godorf,50.8486,6.9758
+130,Friedhof Godorf: Köln,49.9884,7.2696
+131,Immendorf Siedlung: Köln,50.8538,6.9656
+799,Immendorf Schule: Köln,50.8538,6.9656
+133,Zaunhof: Köln-Immendorf,50.8603,6.9551
+742,Rodenkirchen Bismarckstr.: Köln,50.8909,6.9901
+166,Hohenlind: Köln-Lindenthal,50.9244,6.8973
+163,Kitschburger Str.: Köln-Lindenthal,50.9263,6.9016
+141,Theresienstr.: Köln-Lindenthal,50.9295,6.9132
+140,Karl-Schwering-Platz: Köln-Lindenthal,50.9309,6.9170
+137,Hildegardis-Krankenhaus: Köln-Lindenthal,50.9305,6.9229
+803,Wiso-Fakultät: Köln-Innenstadt,50.9311,6.9292
+26,Roonstr.: Köln-Innenstadt,50.9330,6.9344
+806,Prälat-van-Acken-Str.: Köln-Lindenthal,50.9251,6.8969
+859,Güterverkehrszentrum Süd: Köln-Höningen,50.8875,6.9242
+53,Kendenicher Str.: Köln-Zollstock,50.9019,6.9368
+815,Güterverkehrszentrum: Köln-Höningen,50.8875,6.9242
+54,Oberer Komarweg: Köln-Zollstock,50.8986,6.9317
+242,Borsigstr.: Köln-Ehrenfeld,50.9587,6.9052
+252,Häuschensweg: Köln-Bickendorf,50.9610,6.9015
+253,Feltenstr.: Köln-Bickendorf,50.9629,6.9003
+254,Emilstr.: Köln-Bickendorf,50.9664,6.8979
+255,Erlenweg: Köln-Bickendorf,50.9683,6.8956
+262,Bleriotstr.: Köln-Ossendorf,50.9742,6.8909
+627,Gunther-Plüschow-Str.: Köln-Ossendorf,50.9796,6.8847
+264,Mathias-Brüggen-Str.: Köln-Ossendorf,50.9829,6.8851
+848,Am Coloneum: Köln-Ossendorf,52.1527,5.3708
+620,Ebertplatz/Riehler Str.: Köln-Innenstadt,50.9504,6.9589
+33,Worringer Str.: Köln-Innenstadt,50.9554,6.9677
+298,Zoo/Flora: Köln-Riehl,50.9574,6.9733
+303,Bodinusstr.: Köln-Riehl,50.9614,6.9739
+304,Riehler Gürtel: Köln-Riehl,50.9646,6.9767
+305,Seniorenzentrum Riehl: Köln,50.9677,6.9795
+613,Barbarastr.: Köln-Riehl,50.9691,6.9787
+781,Pasteurstr.: Köln-Niehl,50.9715,6.9769
+334,Riehl Betriebshof Nord: Köln-Niehl,50.9574,6.9733
+838,Neven DuMont Haus: Köln-Niehl,50.9744,6.9695
+778,Sprengelstr.: Köln-Riehl,50.9686,6.9689
+306,Xantener Str.: Köln-Riehl,50.9662,6.9687
+294,Kretzerstr.: Köln-Nippes,50.9670,6.9635
+293,Niehler Str.: Köln-Nippes,50.9675,6.9589
+292,Leipziger Platz: Köln-Nippes,50.9664,6.9558
+291,Nordstr.: Köln-Nippes,50.9678,6.9531
+320,Nordfriedhof: Köln-Mauenheim,50.9759,6.9460
+321,Nibelungenplatz: Köln-Mauenheim,50.9749,6.9391
+322,Schmiedegasse: Köln-Mauenheim,50.9771,6.9358
+323,Etzelstr.: Köln-Weidenpesch,50.9783,6.9318
+816,Longericher Str./Etzelstr.: Köln-Bilderstöckchen,50.9834,6.9134
+236,Butzweilerstr.: Köln-Neuehrenfeld,50.9688,6.9165
+246,Vogelsanger Str./Maarweg: Köln-Ehrenfeld,50.9530,6.8995
+626,Vitalisstr. Nord: Köln-Ehrenfeld,50.9431,6.8822
+177,Müngersdorf S-Bahn Technologiepark: Köln,50.9456,6.8875
+84,Josef-Lammerting-Allee: Köln-Müngersdorf,50.9456,6.8875
+175,Stolberger Str./Eupener Str.: Köln-Braunsfeld,50.9423,6.8889
+176,Stolberger Str./Maarweg: Köln-Braunsfeld,50.9423,6.8889
+271,Steinkauzweg: Köln-Vogelsang,50.9634,6.8751
+270,Kolkrabenweg: Köln-Vogelsang,50.9646,6.8792
+12693,Einkaufszentrum: PUDERBACH-Mitte,50.5939,7.6092
+858,Zugweg: Köln-Raderberg,50.9169,6.9558
+857,Volksgarten: Köln-Marienburg,50.9188,6.9501
+827,Am Vorgebirgstor: Köln-Zollstock,52.1527,5.3708
+828,Justizzentrum: Köln-Sülz,50.9223,6.9382
+23,Eifelwall: Köln-Innenstadt,50.9248,6.9371
+829,Südbahnhof: Köln-Innenstadt,50.9267,6.9377
+142,Weißhausstr.: Köln-Sülz,50.9215,6.9336
+821,Bachemer Str.: Köln-Lindenthal,50.9305,6.9267
+718,Innere Kanalstr.: Köln-Ehrenfeld,50.9405,6.9237
+733,Mechternstr.: Köln-Ehrenfeld,50.9426,6.9188
+239,Geisselstr.: Köln-Ehrenfeld,50.9434,6.9166
+794,Bf Ehrenfeld: Köln,51.3952,7.0901
+730,Schadowstr.: Köln-Neuehrenfeld,50.9536,6.9277
+732,Schirmerstr.: Köln-Neuehrenfeld,50.9544,6.9298
+734,Pettenkoferstr.: Köln-Neuehrenfeld,50.9561,6.9340
+731,Methweg: Köln-Neuehrenfeld,50.9567,6.9355
+206,Saarstr.: Köln-Lövenich,50.9440,6.8214
+12,Silbermöwenweg: Köln-Vogelsang,50.9663,6.8766
+207,Severinusstr.: Köln-Lövenich,50.9428,6.8251
+208,Braugasse: Köln-Lövenich,50.9442,6.8298
+200,Bf Lövenich: Köln,51.3952,7.0901
+203,Zaunstr.: Köln-Lövenich,50.9471,6.8300
+204,An der Ronne: Köln-Lövenich,50.4347,7.4044
+220,Blaugasse: Köln-Widdersdorf,50.9628,6.8305
+219,Adrian-Meller-Str.: Köln-Widdersdorf,50.9637,6.8303
+217,Im Buschfelde: Köln-Widdersdorf,51.4256,9.4633
+746,Indianapolis-Straße: Köln-Widdersdorf,50.9683,6.8428
+277,WDR: Köln-Bocklemünd,50.9700,6.8569
+205,Spitzangerweg: Köln-Lövenich,50.9475,6.8270
+201,Seithümerstr.: Köln-Lövenich,50.9463,6.8324
+202,Dieselstr.: Köln-Lövenich,50.9471,6.8418
+186,Roggenweg: Köln-Müngersdorf,50.9479,6.8501
+185,Leinsamenweg: Köln-Müngersdorf,50.9453,6.8534
+184,Flachsweg: Köln-Müngersdorf,50.9460,6.8605
+183,Am Lindenweg: Köln-Müngersdorf,52.1527,5.3708
+855,Belvederestr.: Köln-Müngersdorf,50.9505,6.8680
+182,Kämpchensweg: Köln-Müngersdorf,50.9449,6.8732
+181,Herrigergasse: Köln-Müngersdorf,50.9416,6.8765
+180,Wendelinstr.: Köln-Müngersdorf,50.9402,6.8802
+1243236,Lahnstr. 1: 50996 Köln (Rodenkirchen),50.8944,6.8148
+169,Deckstein: Köln-Lindenthal,50.9168,6.9001
+168,Koppensteinstr.: Köln-Lindenthal,50.9186,6.9026
+833,Freiligrathstr.: Köln-Lindenthal,50.9197,6.9047
+167,Krieler Str.: Köln-Lindenthal,50.9216,6.9074
+139,Leiblplatz: Köln-Lindenthal,50.9259,6.9159
+138,Geibelstr.: Köln-Lindenthal,50.9279,6.9185
+332,Halfengasse: Köln-Niehl,50.9923,6.9588
+45,Im Rheinpark: Köln-Deutz,51.4256,9.4633
+765,Thermalbad: Köln-Deutz,50.9501,6.9820
+243,Bf Deutz/Messeplatz: Köln,51.3952,7.0901
+615,Flittarder Feld: Köln-Flittard,51.0076,6.9941
+819,Klingerstr.: Köln-Porz,50.8836,7.0626
+449,Bf Porz: Köln,51.3952,7.0901
+854,Celsiusstr.: Köln-Porz,50.8821,7.0680
+452,Feuerwache: Köln-Urbach,50.8812,7.0730
+483,Urbach Kaiserstr.: Köln,50.5655,7.5895
+440,Im Falkenhorst: Köln-Eil,51.4256,9.4633
+439,Eil Kirche: Köln,50.8929,7.0745
+441,Eil Heumarer Str.: Köln,50.8929,7.0745
+445,Theodor-Heuss-Str.: Köln-Finkenberg,50.8970,7.0664
+446,Stresemannstr.: Köln-Finkenberg,50.8970,7.0615
+847,Am Hochkreuz: Köln-Gremberghoven,52.1527,5.3708
+442,Maarhäuser Weg: Köln-Eil,50.9095,7.0708
+435,Hansestr. Ost: Köln-Gremberghoven,50.9141,7.0658
+618,Welserstr.: Köln-Gremberghoven,50.9138,7.0591
+624,Frankfurter Str.: Köln-Gremberghoven,50.9417,7.0292
+506,Saarbrücker Str.: Köln-Ostheim,50.9247,7.0452
+505,Buchheimer Weg: Köln-Ostheim,50.9336,7.0375
+491,Mülheimer Friedhof: Köln-Höhenberg,50.9466,7.0225
+550,Beuthener Str.: Köln-Buchheim,50.9499,7.0182
+599,Keupstr.: Köln-Mülheim,50.9661,7.0068
+602,Dünnwalder Str.: Köln-Mülheim,50.9689,7.0069
+600,Von-Sparr-Str.: Köln-Mülheim,50.9704,7.0114
+601,Mülheim Berliner Str.: Köln,50.4488,6.6838
+607,Von-Galen-Str.: Köln-Mülheim,50.9789,7.0132
+606,Bruder-Klaus-Siedlung: Köln-Mülheim,50.9817,7.0084
+605,Neuer Mülheimer Friedhof: Köln-Mülheim,50.9849,7.0043
+772,Stammheim S-Bahn: Köln,50.9861,6.9995
+609,Stammheimer Ring: Köln-Stammheim,50.9892,6.9984
+611,Friedhof Stammheim: Köln,49.9884,7.2696
+612,Egonstr.: Köln-Stammheim,50.9908,6.9862
+616,Am Feldrain: Köln-Flittard,52.1527,5.3708
+617,Edelhofstr.: Köln-Flittard,51.0008,6.9802
+776,Leopold-Gmelin-Str.: Köln-Flittard,51.0011,6.9862
+771,Arthur-Hantzsch-Str.: Köln-Flittard,51.0000,6.9895
+614,Flittard Süd: Köln,50.9984,6.9966
+773,Bayerwerk S-Bahn: Leverkusen-Wiesdorf,51.0114,6.9967
+741,Buchforst S-Bahn: Köln,50.9510,7.0050
+750,Hansestr. West: Köln-Gremberghoven,50.9141,7.0658
+748,August-Horch-Str.: Köln-Gremberghoven,50.9092,7.0510
+418,Ettore-Bugatti-Str.: Köln-Gremberghoven,50.9088,7.0553
+791,Auf dem Streitacker: Köln-Gremberghoven,51.1535,7.0218
+764,Talweg: Köln-Gremberghoven,50.9036,7.0530
+752,Cheruskerstr.: Köln-Gremberghoven,50.9007,7.0551
+593,Steinstr. S-Bahn: Köln-Gremberghoven,50.8918,7.0563
+608,Moses-Hess-Str.: Köln-Stammheim,50.9861,6.9995
+604,Am Faulbach: Köln-Mülheim,52.1527,5.3708
+603,Von-Lohe-Str.: Köln-Mülheim,50.9734,7.0060
+492,Würzburger Str.: Köln-Höhenberg,50.9386,7.0198
+495,Oranienstr.: Köln-Vingst,50.9362,7.0213
+494,Kürtenstr.: Köln-Vingst,50.9284,7.0172
+414,Rolshover Str.: Köln-Humboldt/Gremberg,50.9289,6.9999
+621,Wiedstr.: Köln-Humboldt/Gremberg,50.9261,7.0087
+862,Lüderichstr.: Köln-Humboldt/Grembg,50.9281,7.0023
+499,Esserstr.: Köln-Humboldt/Gremberg,50.9300,6.9969
+497,Weilburger Str.: Köln-Humboldt/Gremberg,50.9315,6.9940
+496,Feldbergstr.: Köln-Humboldt/Gremberg,50.9338,6.9942
+474,Deutzer Ring: Köln-Humboldt/Gremberg,50.9366,6.9704
+44,Betzdorfer Str.: Köln-Deutz,50.9359,6.9911
+755,Im Wirtskamp: Köln-Dünnwald,51.4256,9.4633
+818,Glashüttenstr.: Köln-Porz,50.8887,7.0609
+444,Rudolf-Diesel-Str.: Köln-Eil,50.9017,7.0768
+443,Hansestr. Süd: Köln-Eil,50.9141,7.0658
+528,Schloß Röttgen: Köln-Rath/Heumar,51.9086,8.6106
+529,Eiler Str.: Köln-Rath/Heumar,50.9171,7.0816
+530,Alte Forststr.: Köln-Rath/Heumar,51.0550,7.1336
+531,Baldurstr.: Köln-Rath/Heumar,50.9260,7.0952
+518,Friedhof Lehmbacher Weg: Köln-Brück,49.9884,7.2696
+519,Kleinfeldchensweg: Köln-Brück,50.9401,7.0862
+520,Bückebergstr.: Köln-Brück,50.9418,7.0846
+521,Olpener Str.: Köln-Brück,50.9456,7.0811
+522,Im Langen Bruch: Köln-Brück,51.4256,9.4633
+566,Ostfriedhof: Köln-Dellbrück,50.9639,7.0728
+567,Siedlung Mielenforst: Köln-Dellbrück,50.8837,6.9395
+830,Am Leinacker: Köln-Dellbrück,52.1527,5.3708
+831,Heinz-Kühn-Str.: Köln-Dellbrück,50.9662,7.0603
+832,Roteichenweg: Köln-Dellbrück,50.9680,7.0681
+568,Thurner Kamp: Köln-Dellbrück,50.9689,7.0744
+569,Von-Quadt-Str.: Köln-Dellbrück,50.9767,7.0725
+572,Dellbrück S-Bahn: Köln,51.7766,8.6324
+571,Anemonenweg: Köln-Dellbrück,50.9816,7.0687
+570,Diepeschrather Str.: Köln-Dellbrück,50.9865,7.0678
+590,Kalkweg: Köln-Dünnwald,50.9903,7.0554
+591,Wildpark: Köln-Dünnwald,50.9927,7.0480
+761,Imbacher Weg: Köln-Höhenhaus,50.9941,7.0408
+576,Leuchterstr.: Köln-Dünnwald,50.9964,7.0377
+592,An der Walkmühle: Köln-Dünnwald,50.4347,7.4044
+754,Waldbad: Köln-Dünnwald,50.9986,7.0545
+807,Amselstr.: Köln-Dünnwald,50.9964,7.0384
+801,Gisbertstr.: Köln-Stammheim,50.9873,6.9921
+573,Neurather Weg: Köln-Höhenhaus,50.9788,7.0206
+578,Honschaftsstr.: Köln-Höhenhaus,50.9810,7.0317
+579,Am Springborn: Köln-Höhenhaus,52.1527,5.3708
+628,Eddaweg: Köln-Höhenhaus,50.9766,7.0353
+580,Jasminweg: Köln-Höhenhaus,50.9786,7.0398
+581,Sigwinstr.: Köln-Höhenhaus,50.9820,7.0437
+582,Birkenweg: Köln-Höhenhaus,50.9847,7.0413
+583,Höhscheider Weg: Köln-Höhenhaus,50.9879,7.0420
+584,Lippeweg: Köln-Höhenhaus,50.9918,7.0432
+594,Mutzbach: Köln-Dünnwald,50.9989,7.0344
+585,Klosterhof: Köln-Dünnwald,50.9998,7.0329
+586,Hildegundweg: Köln-Dünnwald,51.0008,7.0293
+587,Am Portzenacker: Köln-Dünnwald,52.1527,5.3708
+588,Leimbachweg: Köln-Dünnwald,51.0067,7.0276
+536,Auguste-Kowalski-Str.: Köln-Dünnwald,51.0054,7.0240
+598,Aeltgen-Dünwald-Str.: Köln-Dünnwald,51.0036,7.0250
+595,Am Weißen Mönch: Köln-Dünnwald,52.1527,5.3708
+610,Bonhoefferstr.: Köln-Stammheim,50.9860,6.9923
+575,Am Emberg: Köln-Höhenhaus,52.1527,5.3708
+759,TÜV-Akademie: Köln-Humboldt/Gremberg,50.9245,6.9942
+842,Deutzer Friedhof: Köln-Humboldt/Gremberg,50.9366,6.9704
+498,Am Grauen Stein: Köln-Humboldt/Gremberg,52.1527,5.3708
+507,Servatiusstr.: Köln-Ostheim,50.9298,7.0472
+597,Goldregenweg: Köln-Höhenhaus,50.9793,7.0491
+556,Kühzällerweg: Köln-Holweide,50.9751,7.0486
+554,Holweide S-Bahn: Köln,50.9584,7.0411
+557,Gerhart-Hauptmann-Str.: Köln-Holweide,50.9730,7.0499
+558,Buschfeldstr.: Köln-Holweide,50.9717,7.0402
+559,Burgwiesenstr.: Köln-Holweide,50.9642,7.0434
+560,Colonia-Allee: Köln-Holweide,50.9633,7.0473
+561,Schlagbaumsweg: Köln-Holweide,50.9594,7.0452
+565,Eggerbachstr.: Köln-Merheim,50.9556,7.0502
+511,Broichstr.: Köln-Merheim,50.9506,7.0502
+512,Bevingsweg: Köln-Merheim,50.9497,7.0429
+513,Ostmerheimer Str.: Köln-Merheim,50.9424,7.0495
+822,Hopfenstr.: Köln-Merheim,50.9422,7.0555
+515,Gewerbegebiet Broichstr.: Köln-Merheim,51.0043,6.8727
+514,Wiehler Str.: Köln-Brück,50.9430,7.0637
+532,Europaring: Köln-Neu-Brück,50.9390,7.0635
+533,Straßburger Platz: Köln-Neu-Brück,50.9359,7.0591
+535,Rösrather Str.: Köln-Neu-Brück,50.9288,7.0609
+508,Autobahn (Bus): Köln-Ostheim,50.9271,7.0538
+46435,Kleingartenanlage: Wadersloh-Mitte,51.7415,8.2558
+802,LVR Kliniken: Köln-Merheim,50.9361,7.0514
+790,Klinikum Merheim: Köln,50.9391,7.0493
+421,Schüttewerk: Köln-Poll,50.9133,6.9830
+269,Lacher Broch: Köln-Holweide,50.9584,7.0411
+422,Alfred-Schütte-Allee: Köln-Poll,50.9117,6.9847
+423,Poll Hauptstr.: Köln,50.9160,6.9928
+424,Im Wasserfeld: Köln-Poll,51.4256,9.4633
+428,Zündorfer Weg: Köln-Poll,50.9105,6.9978
+429,Siegburger Str.: Köln-Poll,50.9145,6.9946
+281,Kochwiesenstr.: Köln-Holweide,50.9636,7.0498
+780,Gauweg: Köln-Buchheim,50.9625,7.0273
+548,Gronauer Str.: Köln-Buchheim,50.9656,7.0260
+760,Mülheimer Ring: Köln-Buchheim,50.9466,7.0225
+541,Montanusstr.: Köln-Mülheim,50.9629,7.0128
+543,Graf-Adolf-Str.: Köln-Mülheim,50.9582,7.0096
+544,Kieler Str.: Köln-Mülheim,50.9559,7.0046
+488,Remscheider Str.: Köln-Kalk,50.9452,7.0074
+487,Steinmetzstr.: Köln-Kalk,50.9433,7.0096
+486,Eythstr.: Köln-Kalk,50.9401,7.0109
+230,Walter-Pauli-Ring: Köln-Kalk,50.9372,6.9948
+775,Trimbornstr.: Köln-Kalk,50.9358,6.9968
+501,Gießener Str.: Köln-Humboldt/Gremberg,50.9338,7.0010
+826,Wattstr.: Köln-Humboldt/Gremberg,50.9318,7.0009
+502,Sauerlandstr.: Köln-Humboldt/Gremberg,50.9262,6.9997
+427,Taubenholzweg: Köln-Poll,50.9216,6.9992
+426,Poller Holzweg: Köln-Poll,50.9236,6.9801
+472,Linder Weg: Köln-Lind,50.8468,7.0944
+850,Voltastr.: Köln-Porz,50.8832,7.0711
+450,Siemensstr.: Köln-Porz,50.8855,7.0710
+451,Kopernikusschule: Köln-Porz,50.8877,7.0707
+437,Humboldtstr.: Köln-Porz,50.9289,6.9999
+438,Bonner Str.: Köln-Eil,50.9041,6.9645
+482,Urbach Waldstr.: Köln,50.5655,7.5895
+453,Antoniusstr.: Köln-Urbach,50.8817,7.0922
+454,Waldstr./Akazienweg: Köln-Grengel,50.8811,7.0977
+456,Friedensstr.: Köln-Grengel,50.8772,7.0977
+457,Wiesenweg: Köln-Grengel,50.8727,7.0981
+461,Kaserne Nordtor: Köln-Grengel,50.8725,7.1075
+477,Lucasstr.: Köln-Wahnheide,50.8657,7.1066
+478,Bieselweg: Köln-Wahnheide,50.8638,7.1006
+434,Albin-Köbis-Straße: Köln-Wahnheide,50.8632,7.0940
+839,Schulzentrum Wahn: Köln,50.8324,7.0260
+468,Nachtigallenstr.: Köln-Wahn,50.8631,7.0839
+466,Wahn S-Bahn: Köln,50.8581,7.0793
+467,Wahn Kirche: Köln,50.8581,7.0793
+479,Kornblumenweg: Köln-Wahn,50.8584,7.0923
+480,Guntherstr.: Köln-Wahnheide,50.8588,7.1003
+840,Scheuermühlenstr.: Köln-Wahnheide,50.8578,7.1081
+619,Nibelungenstr.: Köln-Lind,50.8534,7.1041
+473,Linder Mauspfad: Köln-Lind,50.8468,7.0944
+710,Luftfracht Köln/Bonn,50.8759,7.1134
+455,Grengel Mauspfad: Köln,50.8811,7.0977
+820,Köln/Bonn Flughafen Verwaltung,50.8759,7.1134
+844,Köln/Bonn Flughafen Bf,50.8759,7.1134
+1817,Spich Bf: Troisdorf,50.8267,7.1048
+841,Kaserne Haupttor: Köln-Wahnheide,50.8725,7.1075
+462,Dorotheenstr.: Köln-Urbach,50.8863,7.0742
+625,Marienplatz: Köln-Urbach,50.8849,7.0802
+458,Urbach Friedhof: Köln,50.5655,7.5895
+459,Friedrich-Hirsch-Str.: Köln-Urbach,50.8760,7.0841
+460,Elsdorf: Köln,50.8724,7.0834
+469,Wahn Friedhof: Köln,50.8581,7.0793
+470,Linder Kreuz: Köln-Lind,50.8468,7.0944
+471,Troisdorfer Str.: Köln-Lind,50.8480,7.1007
+481,DLR: Köln-Wahnheide,50.8554,7.1192
+475,Libur Kirche: Köln,50.8382,7.0695
+476,Libur Margaretenstr.: Köln,50.8382,7.0695
+668,Porz-Langel Süd: Köln,50.8514,7.0142
+1205544,An St.Marien 1: 51143 Köln (Zündorf),50.4347,7.4044
+787,Kuenstr.: Köln-Nippes,50.9613,6.9633
+745,Beuelsweg Nord: Köln-Nippes,50.9627,6.9586
+747,Am Schildchen: Köln-Brück,52.1527,5.3708
+756,Gebrüder-Coblenz-Str.: Köln-Deutz,50.9312,6.9816
+758,Reischplatz: Köln-Deutz,50.9364,6.9779

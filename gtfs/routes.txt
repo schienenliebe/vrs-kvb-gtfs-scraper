@@ -1,0 +1,112 @@
+route_id,route_short_name,route_long_name,route_type,route_first,route_last
+001_1,001,Bensberg,0,Weiden West,Im Hoppenkamp
+001_2,001,Weiden,0,Bensberg,Weiden Schulstr.
+003_1,003,Thielenbruch,0,Ollenhauerring,Dellbrück Hauptstr.
+003_2,003,Mengenich,0,Thielenbruch,Schaffrathsgasse
+004_1,004,Schlebusch,0,Bocklemünd,Odenthaler Str.
+004_2,004,Bocklem%81nd,0,Schlebusch,Westfriedhof
+005_1,005,Reichenspergerplatz,0,Sparkasse Am Butzweilerhof,Ebertplatz
+005_2,005,Am_Butzweilerhof,0,Reichenspergerplatz,IKEA Am Butzweilerhof
+007_1,007,Z%81ndorf,0,Frechen­Benzelrath,Rosenhügel
+007_2,007,Frechen,0,Zündorf,Mühlengasse
+009_1,009,K%94nigsforst,0,S#lz Hermeskeiler Platz,R#ttgensweg
+009_2,009,S%81lz,0,Königsforst,Mommsenstr.
+012_1,012,Merkenich,0,Zollstock Südfriedhof,Merkenich Mitte
+012_2,012,Zollstock,0,Merkenich,Zollstockg#rtel
+013_1,013,Holweide,0,Sülzgürtel,Wichheimer Str.
+013_2,013,S%81lzg%81rtel,0,Holweide Vischeringstr.,Berrenrather Str./Gürtel
+015_1,015,Chorweiler,0,Ubierring,Heimersdorf
+015_2,015,Ubierring,0,Chorweiler,Chlodwigplatz
+016_1,016,K%94ln_Niehl,0,Bad Godesberg Stadthalle,Nesselrodestr.
+016_2,016,Bonn_Bad_Godesberg,0,Niehl Sebastianstr.,Bad Godesberg Bf
+018_1,018,Thielenbruch,0,Bonn Hauptbahnhof,Dellbrück Hauptstr.
+018_2,018,Bonn_Hbf,0,Thielenbruch,Bonn West
+106_1,106,Breslauer_Platz,3,Marienburg Südpark,Heumarkt
+106_2,106,Marienburg_S%81dpark,3,Breslauer Platz/Hbf,Marienburger Str.
+120_1,120,Roggendorf,3,Weiler,Im Wichemshof
+120_2,120,Chorweiler,3,Further Str.,Wezelostr.
+121_1,121,Neusser_Str._G%81rtel,3,Langel F#hre,Friedrich­Karl­Str./Neusser Str.
+121_2,121,Langel,3,Neusser Str./Gürtel,Langel Nord
+122_0,122,Weidenpesch,3,Wilhelm­Sollmann­Str.,Bremerhavener Str.
+125_1,125,Sinnersdorf,3,Weiler,Am Zehnthof
+125_2,125,Weiler,3,Sinnersdorf Kirche,Wezelostr.
+126_1,126,Chorweiler,3,Bocklemünd,Karl­Marx­Allee
+126_2,126,Bocklem%81nd,3,Chorweiler,Grevenbroicher Str.
+127_1,127,Longerich,3,Ebertplatz,Longerich Friedhof
+127_2,127,Ebertplatz,3,Longericher Str.,Hansaring
+130_1,130,Universit%84t,3,Sürth Bf,Konradstr.
+130_2,130,S%81rth,3,Universit#t (Endhaltestelle),Marktplatz Sürth
+131_1,131,S%81lz,3,S#rth Bf,S#lzburgstr./Berrenrather Str.
+131_2,131,S%81rth,3,Berrenrather Str.,Marktplatz S#rth
+132_1,132,Dom,3,Frankenstr.,Dom/Hbf
+132_2,132,Meschenich,3,Andreaskloster,Im Rheintal
+133_1,133,Breslauer_Platz_Hbf,3,Zollstock Südfriedhof,Heumarkt
+133_2,133,Zollstock,3,Breslauer Platz/Hbf,Liblarer Str.
+135_1,135,Meschenich,3,Uferstr.,Kettelerstr.
+135_2,135,Rodenkirchen,3,Meschenich Kirche,Rodenkirchen Bismarckstr.
+136_1,136,Neumarkt,3,Hohenlind,Rudolfplatz
+136_2,136,Hohenlind,3,Neumarkt,Prälat­van­Acken­Str.
+138_1,138,Zollstock_S%81dfriedhof,3,Güterverkehrszentrum Süd,Kendenicher Str.
+138_2,138,G%81terverkehrszentrum,3,Zollstock Südfriedhof,Güterverkehrszentrum
+139_1,139,Longerich,3,Äußere Kanalstr.,Longerich Friedhof
+139_2,139,Bickendorf,3,Longericher Str.,Borsigstr.
+140_1,140,Braunsfeld,3,Ebertplatz,Oskar­Jäger­Str./Gürtel
+140_2,140,Ebertplatz,3,Aachener Str./Gürtel,Reichenspergerplatz
+141_1,141,Vogelsang,3,Weiden Zentrum (Stadtb.),Steinkauzweg
+141_2,141,Weiden,3,Kolkrabenweg,Weiden Einkaufszentrum
+142_1,142,Nippes,3,Chlodwigplatz,Zonser Str.
+142_2,142,Chlodwigplatz,3,Merheimer Platz,Alteburger Wall
+143_1,143,Bocklem%81nd,3,Saarstr.,Silbermöwenweg
+143_2,143,L%94venich,3,Bocklemünd,Spitzangerweg
+144_1,144,Junkersdorf,3,Bf Lövenich,Alter Militärring
+144_2,144,L%94venich,3,Junkersdorf,Seithümerstr.
+145_1,145,Frechen,3,Bocklemünd,Lahnstr.
+145_2,145,Bocklem%81nd,3,Lindenbuschweg,WDR
+146_1,146,Neumarkt,3,Deckstein,Rudolfplatz
+146_2,146,Deckstein,3,Neumarkt,Koppensteinstr.
+147_1,147,Niehl,3,Am Bilderstöckchen,Halfengasse
+147_2,147,Bilderst%94ckchen,3,Niehl,Alzeyer Str.
+149_0,149,Widdersdorf,3,Weiden Zentrum (Stadtb.),Weiden Zentrum
+150_1,150,Thermalbad,3,Bf Deutz/Messe,Im Rheinpark
+150_2,150,Bf_Deutz_Messe,3,Thermalbad,Bf Deutz/Messeplatz
+151_1,151,Bayerwerk,3,Porz Markt,Flittarder Feld
+151_2,151,Porz_Markt,3,Bayerwerk S­Bahn,Klingerstr.
+152_1,152,Bayerwerk,3,Porz Markt,Flittarder Feld
+152_2,152,Porz_Markt.pdf.txt.utf8.data,3,Bayerwerk S­Bahn,Klingerstr.
+153_1,153,Neuer_M%81lheimer_Friedhof,3,Bf Deutz/LANXESS arena,Stammheim S­Bahn
+153_2,153,Deutz,3,Neuer Mülheimer Friedhof,Deutz­Kalker Bad
+154_1,154,D%81nnwald,3,Porz Markt,Im Wirtskamp
+154_2,154,Porz_Markt,3,Dünnwald Waldbad,Glashüttenstr.
+155_1,155,Stammheim,3,Mülheim Berliner Str.,Gisbertstr.
+155_2,155,M%81lheim_Berliner_Str.,3,Bonhoefferstr.,Neurather Weg
+156_1,156,Am_Grauen_Stein,3,Bf Deutz/LANXESS arena,TÜV­Akademie
+156_2,156,Bf_Deutz_LANXESS_arena,3,Am Grauen Stein,Deutzer Friedhof
+157_1,157,H%94henhaus,3,Ostheim,Auguste­Kowalski­Str.
+157_2,157,Ostheim,3,Aeltgen­Dünwald­Str.,Servatiusstr.
+157E_1,157E,Kleingartenanlage,3,Ostheim,Ostheim
+157E_2,157E,Ostheim,3,Kleingartenanlage Ostheim,Kleingartenanlage Ostheim
+158_1,158,Merheim,3,LVR­Klinik,Ostmerheimer Str.
+158_2,158,LVR-Klinik,3,Merheim,Klinikum Merheim
+159_1,159,Buchheim,3,Schüttewerk,Lacher Broch
+159_2,159,Poll,3,Kochwiesenstr.,Alfred­Schütte­Allee
+160_1,160,Lind,3,Porz Markt,Linder Weg
+160_2,160,Porz_Markt,3,Linder Mauspfad,Klingerstr.
+161_1,161,Flughafen,3,Porz Markt,Luftfracht Köln/Bonn
+161_2,161,Porz_Markt,3,Köln/Bonn Flughafen,Klingerstr.
+162_1,162,Lind,3,Porz Markt,Kaserne Haupttor
+162_2,162,Porz_Markt,3,DLR,Klingerstr.
+163_1,163,Bonn_Hbf,3,Wahn S­Bahn,Libur Kirche
+163_2,163,Wahn_S-Bahn,3,Libur Kirche,Libur Margaretenstr.
+164_1,164,Wahn_S-Bahn,3,Porz­Langel Süd,An St. Marien
+164_2,164,Siegburg_Bf,3,Wahn S­Bahn,Porz­Langel Süd
+165_0,165,Porz_Markt,3,Porz Markt,Glashüttenstr.
+166_0,166,Porz_Markt,3,Porz Markt,Klingerstr.
+167_0,167,Wahn_S-Bahn,3,Wahn S­Bahn,Wahn Kirche
+185_1,185,Lind,3,Porz Markt,Kornblumenweg
+185_2,185,Porz_Markt,3,Linder Mauspfad,Kaserne Nordtor
+186_1,186,Schneider-Clauss-Str.,3,Neusser Str./Gürtel,Kuenstr.
+186_2,186,Neusser_Str._G%FCrtel,3,Beuelsweg,Nordstr.
+187_1,187,Am_Schildchen,3,Rösrather Str.,Brück Mauspfad
+187_2,187,R%94srather_Str.,3,Am Schildchen,Straßburger Platz
+188_1,188,Bf_Deutz_LANXESS_arena,3,Gebrüder­Coblenz­Str.,Reischplatz
+188_2,188,Gebr%81der-Coblenz-Str.,3,Bf Deutz/LANXESS arena,Reischplatz
